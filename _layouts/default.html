@@ -23,6 +23,14 @@
       <section>
       {{ content }}
       </section>
+      <section class="related">
+        <h2>Related posts</h2>
+        <ul>
+          {% for post in site.related_posts %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
       <section class="disqus">
         <div id="disqus_thread"></div>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

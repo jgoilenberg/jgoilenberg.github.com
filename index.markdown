@@ -10,9 +10,8 @@ By reading the [getting started](/getting-started) tutorial you'll be able to wr
 <ul class="posts ch-g1">
   {% for post in site.categories.popular reversed %}
     <li>
-      <a href="{{ post.url }}" id="{{ cat }}">
+      <a href="{{ post.url }}">
         <h3>{{ post.title }}</h3>
-        <p>{{ post.description }}</p>
       </a>
     </li>
   {% endfor %}
