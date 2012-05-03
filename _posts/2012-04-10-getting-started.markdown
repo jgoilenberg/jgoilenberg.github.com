@@ -84,7 +84,9 @@ Now you know what are our REST APIs, and you know how to obtain an access token 
 
 <script>
     $(document).ready(function() {
-        MELI.init({client_id: 6092});
+        MELI.init({client_id: 6092, 
+				   xd_url: "/xd.html",
+				   xauth_domain: "experimental.mercadolibre.io"});
         MELI.getLoginStatus();
         $('#token').hide();
         $('#me').hide();
