@@ -65,7 +65,7 @@ You'll get a `403 Forbidden` http status code. This means you need this special 
 > NOTE: Access tokens will be granted to you by the owner of the information you are trying to access. See [Authentication & Authorization](/authentication-and-authorization.html).
 
 In order to start playing with the APIs, click the button to get an access token.
-<p><input id="button" class="ch-btn ch-btn-small" type="button" id="get-access-token" value="Get my access token" />
+<p><input class="ch-btn ch-btn-small" type="button" id="get-access-token" value="Get my access token" />
 <pre id="token"><code id="access_token">token</code></pre></p>
 
 > NOTE: You'll be granting to this developer site basic access to your information.
@@ -76,7 +76,7 @@ Now that you have an acccess token, the developers site application can access y
 
     curl https://api.mercadolibre.com/users/me?access_token=...
 
-<input id="button" class="ch-btn ch-btn-small" type="button" id="show-my-info" value="Show my information" />
+<input class="ch-btn ch-btn-small" type="button" id="show-my-info" value="Show my information" />
 <p><pre id="me">info</pre></p>
 
 ## What's next?
