@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: 2columns
 title: Getting Started
 categories: tutorials popular
 ---

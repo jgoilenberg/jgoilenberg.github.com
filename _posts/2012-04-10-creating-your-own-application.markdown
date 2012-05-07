@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: 2columns
 title: Creating your own application
 ---
 

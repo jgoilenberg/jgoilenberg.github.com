@@ -227,13 +227,13 @@ header.main input#search {
 	width:980px; /* Same as body */
 	height:213px;
 	margin:0 auto;
-	padding:0 10px;
+	padding:10px;
 	position:relative;
 }
 
 .description h2 {
 	font-size:36px!important;
-	margin:40px 0 25px!important;
+	margin:25px 0 25px!important;
 }
 
 .description p {
@@ -363,6 +363,10 @@ footer .secondary .ch-dropdown-trigger {
 footer .social {
 	text-align: right;
 	border:none;
+}
+
+footer .maintained-by{
+	text-align: right;
 }
 
 

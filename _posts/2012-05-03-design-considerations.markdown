@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: 2columns
 title: Design Considerations
 categories: tutorials popular
 ---
