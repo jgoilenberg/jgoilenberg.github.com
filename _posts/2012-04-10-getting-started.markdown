@@ -36,7 +36,7 @@ You'll get a list of countries:
 
 And if you want a specific country you can do:
 
-    curl https://api.mercadolibre.com/countries/BR
+<pre class="terminal">$ curl https://api.mercadolibre.com/countries/BR</pre>
 
 In this case you'll get the information of Brazil.
 
@@ -58,7 +58,7 @@ In this case you'll get the information of Brazil.
 Our APIs will give you lots of information. Some of it is private, meaning you'll get access only if you have an _access token_.
 For example if you want to get your own information:
 
-    curl https://api.mercadolibre.com/users/me
+<pre class="terminal">$ curl https://api.mercadolibre.com/users/me</pre>
 
 You'll get a `403 Forbidden` http status code. This means you need this special access token that will validate that you actually gave the application permissions to access your information. See [HTTP Status Codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
 
@@ -74,7 +74,7 @@ In order to start playing with the APIs, click the button to get an access token
 
 Now that you have an acccess token, the developers site application can access your basic information by requesting `/users/me` and appending a query string parameter called `access_token` with the value of the access token:
 
-    curl https://api.mercadolibre.com/users/me?access_token=...
+<pre class="terminal">$ curl https://api.mercadolibre.com/users/me?access_token=...</pre>
 
 <input class="ch-btn ch-btn-small" type="button" id="show-my-info" value="Show my information" />
 <p><pre id="me">info</pre></p>
