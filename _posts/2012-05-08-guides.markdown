@@ -3,7 +3,10 @@
 layout: 1columns
 title: Guides
 categories: tutorials popular
-guides: [List, Users, Search]
+guides: 
+- List
+- Users
+- Search
 ---
 
 # Guides & SDKs
