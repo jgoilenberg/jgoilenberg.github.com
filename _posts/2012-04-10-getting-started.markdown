@@ -8,7 +8,13 @@ categories: tutorials popular
 
 If you're reading this it's because you're wondering which is the easiest way to start using our APIs. Good news! It is dead simple!
 
-## Your first approach to the APIs
+### Table of Contents
+- [Your first approach to the APIs](#first-approach)
+- [Get your access token!](#get-access-token)
+- [Use your access token!](#use-access-token)
+- [What's next?](#whats-next)
+
+## Your first approach to the APIs {#first-approach}
 Our APIs are [RESTful](http://es.wikipedia.org/wiki/Representational_State_Transfer), which means thet every url provides information on different business entities. We call this _resource_. The way you can operate on resources is by using HTTP _methods_ (see [HTTP Methods](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9)).
 Some of these basic methods are:
 * GET: Retrieve information identified by the resource (see [GET](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3)).
@@ -54,7 +60,7 @@ In this case you'll get the information of Brazil.
 }
 {% endhighlight %}
 
-## Get your access token!
+## Get your access token! {#get-access-token}
 Our APIs will give you lots of information. Some of it is private, meaning you'll get access only if you have an _access token_.
 For example if you want to get your own information:
 
@@ -70,7 +76,7 @@ In order to start playing with the APIs, click the button to get an access token
 
 > NOTE: You'll be granting to this developer site basic access to your information.
 
-## Use your access token!
+## Use your access token! {#use-access-token}
 
 Now that you have an acccess token, the developers site application can access your basic information by requesting `/users/me` and appending a query string parameter called `access_token` with the value of the access token:
 
@@ -79,8 +85,12 @@ Now that you have an acccess token, the developers site application can access y
 <input class="ch-btn ch-btn-small" type="button" id="show-my-info" value="Show my information" />
 <p><pre id="me">info</pre></p>
 
-## What's next?
-Now you know what are our REST APIs, and you know how to obtain an access token and use it to access different resources. Probably the next step should be [creating your own application](creating-your-own-application.html) or you can also check [what can you do with the APIs](what-can-you-do-with-apis.html).
+## What's next? {#whats-next}
+
+Now you know what are our REST APIs, and you know how to obtain an access token and use it to access different resources. Probably the next step should be [creating your own application](/creating-your-own-application) or you can also check [what can you do with the APIs](/guides).
+
+
+
 
 <script>
     $(document).ready(function() {
