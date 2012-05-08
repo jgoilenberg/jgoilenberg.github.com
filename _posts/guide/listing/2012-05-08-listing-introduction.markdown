@@ -2,7 +2,7 @@
 layout: 1columns
 title: Listing introduction
 categories: guides
-tag: List
+tag: Listing
 ---
 
 # Listings Introduction

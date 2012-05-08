@@ -2,7 +2,7 @@
 layout: 1columns
 title: Add description to items
 categories: guides
-tag: List
+tag: Listing
 ---
 
 # Add description to existing items

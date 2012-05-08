@@ -2,7 +2,7 @@
 layout: 1columns
 title: Add pictures to items
 categories: guides
-tag: List
+tag: Listing
 ---
 
 # Add pictures to existing items

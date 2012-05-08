@@ -2,7 +2,7 @@
 layout: 1columns
 title: List items
 categories: guides
-tag: List
+tag: Listing
 ---
 
 # List your Item
