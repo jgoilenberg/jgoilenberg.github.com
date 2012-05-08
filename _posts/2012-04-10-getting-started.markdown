@@ -9,7 +9,7 @@ categories: tutorials popular
 If you're reading this it's because you're wondering which is the easiest way to start using our APIs. Good news! It is dead simple!
 
 ## Your first approach to the APIs
-Our APIs are RESTful, which means thet every url provides information on different business entities. We call this _resource_. The way you can operate on resources is by using HTTP _methods_ (see [HTTP Methods](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9)).
+Our APIs are [RESTful](http://es.wikipedia.org/wiki/Representational_State_Transfer), which means thet every url provides information on different business entities. We call this _resource_. The way you can operate on resources is by using HTTP _methods_ (see [HTTP Methods](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9)).
 Some of these basic methods are:
 * GET: Retrieve information identified by the resource (see [GET](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3)).
 * POST: Create a new resource (see [POST](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5)).
