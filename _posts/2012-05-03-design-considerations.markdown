@@ -8,13 +8,14 @@ categories: tutorials popular
 
 There are some things you should know about our APIs to make your life easier.
 
-- [JSON encoded](#json).
-- [JSONP is supported](#jsonp).
-- [Dates are formatted in ISO 8601](#iso8601)
-- [Errors have a standard format](#error-format)
-- [Reduce your response](#selection).
-- [Filter by IDs](#filter-by-id)
-- [Use OPTIONS to read API documentation](#options)
+### Table of Contents 
+
+- [JSON](#json).
+- [JSONP](#jsonp).
+- [Date format (ISO 8601)](#iso8601)
+- [Handling errors](#error-format)
+- [Reducing responses](#selection).
+- [Using OPTIONS](#options)
 
 ## All responses are JSON encoded. {#json}
 JSON is a lightweight text-based open standard designed for human-readable data interchange. You can read more [here](http://en.wikipedia.org/wiki/JSON).
