@@ -8,6 +8,8 @@ categories: tutorials popular
 
 There are some things you should know about our APIs to make your life easier.
 
+### Table of Contents 
+
 - [JSON](#json).
 - [JSONP](#jsonp).
 - [Date format (ISO 8601)](#iso8601)
