@@ -10,7 +10,7 @@ If you're reading this it's because you're wondering which is the easiest way to
 
 ### Table of Contents
 - [Your first approach to the APIs](#first-approach)
-- [Get your access token!](#get-access-token)
+- [Get your access token!](#access-token-title)
 - [Use your access token!](#use-access-token)
 - [What's next?](#whats-next)
 
@@ -60,7 +60,7 @@ In this case you'll get the information of Brazil.
 }
 {% endhighlight %}
 
-## Get your access token! {#get-access-token}
+## Get your access token! {#access-token-title}
 Our APIs will give you lots of information. Some of it is private, meaning you'll get access only if you have an _access token_.
 For example if you want to get your own information:
 
