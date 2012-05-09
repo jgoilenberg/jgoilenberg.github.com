@@ -1,6 +1,7 @@
 ---
 layout: 2columns
 title: Creating your own application
+categories: tutorials popular
 ---
 
 ## Creating your own application
