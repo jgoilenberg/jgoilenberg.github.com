@@ -22,7 +22,7 @@ You can add a description to your item with the following POST, specifying the i
 <pre class="terminal">
 curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -d
 '{
-"text":"This is the first book of Harry Potter that was printed outside the UK, <strong> I bought it in San Francisco at the Harry Potters week in 2009 </strong> Do not miss the opportunity, it is in perfect conditions and with a unique design cover"
+"text":"This is the first book of Harry Potter that was printed outside the UK, {{"<strong> I bought it in San Francisco at the Harry Potters week in 2009 </strong>" | xml_escape }} Do not miss the opportunity, it is in perfect conditions and with a unique design cover"
 }'
 
 https://api.mercadolibre.com/items/MLA421101451/descriptions?access_token=$ACCESS_TOKEN

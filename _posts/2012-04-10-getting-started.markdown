@@ -10,14 +10,15 @@ If you're reading this it's because you're wondering which is the easiest way to
 
 ### Table of Contents
 - [Your first approach to the APIs](#first-approach)
-- [Get your access token!](#get-access-token)
+- [Get your access token!](#access-token-title)
 - [Use your access token!](#use-access-token)
 - [What's next?](#whats-next)
 
 ## Your first approach to the APIs {#first-approach}
-Our APIs are [RESTful](http://es.wikipedia.org/wiki/Representational_State_Transfer), which means thet every url provides information on different business entities. We call this _resource_. The way you can operate on resources is by using HTTP _methods_ (see [HTTP Methods](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9)).
+Our APIs are [RESTful](http://es.wikipedia.org/wiki/Representational_State_Transfer), which means thet every url provides information on different business entities. We call this _resource_. The way you can operate on resources is by using HTTP _methods_ (see [HTTP Methods](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9)).  
+
 Some of these basic methods are:
-* GET: Retrieve information identified by the resource (see [GET](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3)).
+* `GET`: Retrieve information identified by the resource (see [GET](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3)).
 * POST: Create a new resource (see [POST](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5)).
 * PUT: Change a resource (see [PUT](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.6)).
 * DELETE: Delete a resource (see [DELETE](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.7)).
@@ -60,7 +61,7 @@ In this case you'll get the information of Brazil.
 }
 {% endhighlight %}
 
-## Get your access token! {#get-access-token}
+## Get your access token! {#access-token-title}
 Our APIs will give you lots of information. Some of it is private, meaning you'll get access only if you have an _access token_.
 For example if you want to get your own information:
 
@@ -68,7 +69,7 @@ For example if you want to get your own information:
 
 You'll get a `403 Forbidden` http status code. This means you need this special access token that will validate that you actually gave the application permissions to access your information. See [HTTP Status Codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
 
-> NOTE: Access tokens will be granted to you by the owner of the information you are trying to access. See [Authentication & Authorization](/authentication-and-authorization.html).
+> NOTE: Access tokens will be granted to you by the owner of the information you are trying to access. See [Authentication & Authorization](/authentication-and-authorization).
 
 In order to start playing with the APIs, click the button to get an access token.
 <p><input class="ch-btn ch-btn-small" type="button" id="get-access-token" value="Get my access token" />
@@ -88,9 +89,6 @@ Now that you have an acccess token, the developers site application can access y
 ## What's next? {#whats-next}
 
 Now you know what are our REST APIs, and you know how to obtain an access token and use it to access different resources. Probably the next step should be [creating your own application](/creating-your-own-application) or you can also check [what can you do with the APIs](/guides).
-
-
-
 
 <script>
     $(document).ready(function() {
