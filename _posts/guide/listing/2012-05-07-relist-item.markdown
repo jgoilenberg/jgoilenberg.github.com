@@ -1,5 +1,5 @@
 ---
-layout: 1columns
+layout: 2columns
 title: Relist an item
 categories: guides
 tag: Listing

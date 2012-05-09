@@ -1,5 +1,5 @@
 ---
-layout: 1columns
+layout: 2columns
 title: Private user information
 categories: guides
 tag: Users

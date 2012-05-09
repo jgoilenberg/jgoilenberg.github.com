@@ -1,5 +1,5 @@
 ---
-layout: 1columns
+layout: 2columns
 title: Add description to items
 categories: guides
 tag: Listing

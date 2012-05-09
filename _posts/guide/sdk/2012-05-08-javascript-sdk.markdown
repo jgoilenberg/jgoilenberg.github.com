@@ -1,5 +1,5 @@
 ---
-layout: 1columns
+layout: 2columns
 title: Javascript SDK
 categories: guides
 tag: SDKs

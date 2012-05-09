@@ -1,6 +1,7 @@
 ---
 layout: 1columns
 title: Discuss
+tag: home
 ---
 
 ## Get in contact with us and with other developers!
