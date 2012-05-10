@@ -18,16 +18,12 @@ So, let’s see how to list items in MELI. Don’t worry about the different att
 ### Table of Contents
 - [Requirements](#requirements)
 - [Listing example](#list-example)
-- [Further considerations](#further-consideration)
+- [Special considerations for real estate, vehicles & services](#further-consideration)
 
 
 ## Previous requirements
 
-In order to list items you need to have a registered user in the same location of the item you're planning to list. If you don't have an account
-already, go to [http://www.mercadolibre.com](http://www.mercadolibre.com) select your country and register a new user.
 
-**Note**: If this is the first time you're listing an item, you need to fill some required information before doing any operation. Please refeer to the
-[new users](/guide-appendix-users) section to see how to accomplish this step.
 
 
 
@@ -76,13 +72,13 @@ The Items API will automatically download the provided images to MELI Storage an
 If you have some questions regarding how to get your access token to list items, please refer to the [getting started](/getting-started) tutorial.
 
 
-## Further considerations{#further-consideration}
+## Special considerations for real estate, vehicles & services {#further-consideration}
 
 In MELI you can list different type of items which can be grouped in the following categories:
 
 *Products    
 *Vehicles    
-*Real state    
+*Real estate    
 *Services    
 
 As you may suppose, each type of item has it's own attributes and restrictions when listing them. Please refer to the [API Appendinx](/guide-appendix) for more information 
