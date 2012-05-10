@@ -7,7 +7,7 @@ tag: Appendix
 
 #Appendix – Related APIs
 
-Some of the tutorials described in this section need “id’s” from different MELI’s API’s.
+Some of the tutorials described in this site need several “id’s” from different MELI’s API’s.
 
 For example, when you list an item, you have to specify the following attributes:
 
@@ -88,8 +88,6 @@ For second level categories, or information related to specific categories, you 
 
 As you can see, you get the “path_from_root” and "children_categories" attributes, use these attributes to browse the categories tree to find the specific category for your item.
 
-For more information about Categories API specific attributes see this tutorial: Categories API
-
 ##Currency API
 
 You can get the default currency_id for each MELI operation, using the Sites API.
@@ -118,9 +116,8 @@ In this case, you have to take a look at the “default_currency_id” attribute
 ],
 }
 
-{% endhighlight %}
-If you need more information related to each currency_id you can see a detailed description using the Currencies API.
-
+{% endhighlight %}  
+  
 	https://api.mercadolibre.com/currencies/ARS
 {% highlight javascript %}
 {
