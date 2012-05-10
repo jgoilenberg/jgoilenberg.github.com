@@ -53,7 +53,11 @@ curl -X POST -H "Content-Type: application/json" -d
 https://api.mercadolibre.com/items?access_token=$ACCESS_TOKEN  
 </pre>
 
+As you may suppose, each type of item has it's own attributes and restrictions when listing them. Please refer to the [API Appendinx](/guide-appendix) for more information 
+about how to obtain and use these attributes.
+
 The Items API will automatically download the provided images to MELI Storage and creates a listing for your item. You will receive the following Json response:
+
 
 {% highlight javascript %}
 {
@@ -81,8 +85,6 @@ In MELI you can list different type of items which can be grouped in the followi
 *Real estate    
 *Services    
 
-As you may suppose, each type of item has it's own attributes and restrictions when listing them. Please refer to the [API Appendinx](/guide-appendix) for more information 
-about how to obtain and use these attributes.
 
 If you still have some questions, [Here](/real-state-list-item) you can see an example on how to list real state items in MELI.
 
