@@ -86,7 +86,7 @@ In MELI you can list different type of items which can be grouped in the followi
 *Services    
 
 
-If you still have some questions, [Here](/real-state-list-item) you can see an example on how to list real state items in MELI.
+If you still have some questions, [Here](/real-estate-list-item) you can see an example on how to list real estate items in MELI.
 
 
 

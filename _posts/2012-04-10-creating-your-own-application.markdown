@@ -13,4 +13,15 @@ When you create an application you can start requesting users to grant you acces
 
 So before continuing, make sure you are registered as a user. In case you want to create a user, do it now by browsing to [http://www.mercadolibre.com].
 
-Now that you have a registered user, go to the [application manager](applications.mercadolibre.com.ar).
+Now that you have a registered user, go to the [application manager](http://applications.mercadolibre.com.ar/home) and create an application as described below:
+
+![App create](/images/applications.png)
+
+
+Fill in the form with the required information and select the "read" & "write" scopes. Once you've submitted the form, your application will be created and you will be redirected to your
+application detail page.
+
+![App detail](/images/application-detail.png)
+
+The attributes you will need for the MELI api are: _ID_ (your client_id) and the  _Secret key_ to retrieve the corresponding access tokens. Make sure to protect and keep confidential this information.
+
