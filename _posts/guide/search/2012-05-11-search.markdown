@@ -22,4 +22,4 @@ For example:
 	....sites/MLA/search?nickname=...   (Search items by seller nickname)    
 	
 
-For more information about search options you can browse [https://api.mercadolibre.com/sites/MLA/search/](https://api.mercadolibre.com/sites/MLA/search/)
+For more information about search options you can check the website [https://api.mercadolibre.com/sites/MLA/search/](https://api.mercadolibre.com/sites/MLA/search/)
