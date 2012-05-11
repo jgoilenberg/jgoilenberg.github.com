@@ -128,11 +128,7 @@ Another required field for real estate items is the location information of the 
 
 	https://api.mercadolibre.com/classified_locations/countries/
 	
-Select the country you want to list your item in and retrieve all the location ids (country/estate/city/neighborhoods) necessary to submit your request.    
-    
-By this time you should have all the necessary information to list your real estate item, move on to the next topic to see a real example using the attributes we've just
-just gathered
-
+Select the country you want to list your item in and retrieve all the location ids (country/state/city/neighborhoods) necessary to submit your request.    
 
 
 
