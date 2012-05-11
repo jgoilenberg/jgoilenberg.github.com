@@ -16,15 +16,8 @@ So, let’s see how to list items in MELI. Don’t worry about the different att
 
 
 ### Table of Contents
-- [Requirements](#requirements)
 - [Listing example](#list-example)
 - [Special considerations for real estate, vehicles & services](#further-consideration)
-
-
-## Previous requirements
-
-
-
 
 
 ## Listing example{#list-example}
