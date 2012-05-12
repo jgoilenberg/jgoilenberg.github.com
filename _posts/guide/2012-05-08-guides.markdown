@@ -8,6 +8,7 @@ guides:
 - Listing
 - Users
 - Search
+- Contact
 - Appendix
 ---
 
