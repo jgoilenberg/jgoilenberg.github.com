@@ -8,7 +8,7 @@ tag: Listing
 # List your Item
 
 
-You already know what items and attributes are. If you don’t know we recommend that you read the Listings Introduction tutorial.
+You already know what items and attributes are. If you don’t know we recommend that you read the [Listings Introduction tutorial](/listing-introduction).
 
 
 So, let’s see how to list items in MELI. Don’t worry about the different attribute codes, we are going to explain each one latter.
@@ -16,15 +16,8 @@ So, let’s see how to list items in MELI. Don’t worry about the different att
 
 
 ### Table of Contents
-- [Requirements](#requirements)
 - [Listing example](#list-example)
 - [Special considerations for real estate, vehicles & services](#further-consideration)
-
-
-## Previous requirements
-
-
-
 
 
 ## Listing example{#list-example}
@@ -86,7 +79,7 @@ In MELI you can list different type of items which can be grouped in the followi
 *Services    
 
 
-If you still have some questions, [Here](/real-estate-list-item) you can see an example on how to list real estate items in MELI.
+If you want to try with another example , [here](/real-estate-list-item) you can see how to list real estate items in MELI.
 
 
 
