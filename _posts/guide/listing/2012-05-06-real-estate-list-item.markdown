@@ -2,7 +2,7 @@
 layout: 2columns
 title: Real estate listing
 categories: guides
-tag: Appendix
+tag: Listing
 ---
 
 
