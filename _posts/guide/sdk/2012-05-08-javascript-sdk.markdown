@@ -35,7 +35,7 @@ MELI.get(
 Under the hood, the JSSDK checks that:
 
 * You are actually you
-* The app “melidev” is the actual caller
+* The app “melidev” (client_id #6586 in this example) is the actual caller
 * You authorized the app “melidev” to access your data
 
 
