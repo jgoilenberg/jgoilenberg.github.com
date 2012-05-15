@@ -85,6 +85,6 @@ The consumer should make POST request to the token endpoint, with the following 
 - `client_id` — Consumer key from the remote access application definition.
 - `client_secret` — Consumer secret from the remote access application definition. This parameter is optional.    
 
-		https://auth.mercadolibre.com/oauth/token?grant_type=refresh_token&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&refresh_token=REFRESH_TOKEN
+		https://api.mercadolibre.com/oauth/token?grant_type=refresh_token&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&refresh_token=REFRESH_TOKEN
 		
 
