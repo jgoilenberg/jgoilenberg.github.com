@@ -15,6 +15,7 @@ A successful authentication flow results in your application obtaining a user ac
 - [User login](#user-login)
 - [Server side flow](#server-side-flow)
 - [Client side flow](#client-side-flow)
+- [Token refresh](#token-refresh)
 
 
 ##Access Token Validity & Expiration {#token-validity}
@@ -72,3 +73,18 @@ Besides the access token, the response also contains the time in seconds the acc
 As with the server-flow, the client-side flow also uses the OAuth Dialog for user authentication and app authorization. The only difference is that you must remove the redirect_uri parameter. The URL should look like:
 
 	https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=Client_id
+
+## Token refresh {#token-refresh}
+After the consumer has been authorized for access, they can use a refresh token to get a new access token (session ID.) This is only done after the consumer already has received an access token using either the Web server or user-agent flow. This becomes necessary when an access token is no longer valid and when you need to  apply for a new one.    
+    
+A consumer can use the refresh token to get a new session as needed.
+The consumer should make POST request to the token endpoint, with the following parameters:    
+
+- `grant_type` — Value must be refresh_token for this flow.
+- `refresh_token` — Refresh token from the approval step.
+- `client_id` — Consumer key from the remote access application definition.
+- `client_secret` — Consumer secret from the remote access application definition. This parameter is optional.    
+
+		https://auth.mercadolibre.com/oauth/token?grant_type=refresh_token&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&refresh_token=REFRESH_TOKEN
+		
+
