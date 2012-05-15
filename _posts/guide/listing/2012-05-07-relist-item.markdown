@@ -2,7 +2,7 @@
 layout: 2columns
 title: Relist an item
 categories: guides
-tag: Listing
+tags: Selling
 ---
 
 #Relist an Item

@@ -2,7 +2,7 @@
 layout: 2columns
 title: Javascript SDK
 categories: guides
-tag: SDKs
+tags: SDKs
 ---
 
 
@@ -33,10 +33,15 @@ MELI.get(
 {% endhighlight %}
 
 Under the hood, the JSSDK checks that:
+- You are actually you
+- The app “melidev” (client_id #6586 in this example) is the actual caller
+- You authorized the app “melidev” to access your data
+    
+If you want to contribute or you find something that needs to be fixed, just fork our SDK in [GitHub](https://github.com/mercadolibre/mercadolibre.js) and pull requests as needed or get in touch
+through our [contact](/discuss) page
 
-* You are actually you
-* The app “melidev” (client_id #6586 in this example) is the actual caller
-* You authorized the app “melidev” to access your data
+
+
 
 
 

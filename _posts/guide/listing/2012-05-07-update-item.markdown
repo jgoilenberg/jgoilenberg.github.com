@@ -2,7 +2,7 @@
 layout: 2columns
 title: Update an item
 categories: guides
-tag: Listing
+tags: Selling
 ---
 
 

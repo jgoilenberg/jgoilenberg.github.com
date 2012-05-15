@@ -2,7 +2,7 @@
 layout: 2columns
 title: Listing introduction
 categories: guides
-tag: Listing
+tags: Selling
 ---
 
 # Listings Introduction
