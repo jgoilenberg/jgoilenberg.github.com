@@ -2,7 +2,9 @@
 layout: 2columns
 title: Searching
 categories: guides
-tags: Buying
+tags: 
+- Buying
+- Searching
 ---
 
 # Searching
