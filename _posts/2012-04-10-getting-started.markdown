@@ -2,7 +2,7 @@
 layout: 2columns
 title: Getting Started
 categories: tutorials popular
-tag: home
+tags: home
 ---
 
 # Getting Started
