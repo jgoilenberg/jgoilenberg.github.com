@@ -801,6 +801,10 @@ q.single:after{content:"'";}
 }
 
 
+.post_nav {
+	height:20px;
+}
+
 .post_nav .previous {
 	position:absolute;
 }
