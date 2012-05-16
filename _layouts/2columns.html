@@ -4,6 +4,7 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9 ie8" lang="en"> <![endif]-->
 <!--[if (gt IE 8)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
   <head>
+	{% include meta-tags.html %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>{{ page.title }}</title>  
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
     <link rel="stylesheet" href="http://static.mlstatic.com/org-img/ch/ui/0.10.5/chico-mesh.min.css">
     <link rel="stylesheet" href="/stylesheets/site.css">
+    <link rel="canonical" href="{{ page.url | canonical }}" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     
@@ -39,20 +41,20 @@
 
       {{ content }}
 
-	<!--  <section>
+	  <section>
 		 <div class="prev_next post_nav">
-			{% if page.previous.url %}
+			{% if page.next.url %}
 				<p class="previous">
-			«&nbsp;<a href="{{ page.previous.url }}/" rel="previous" title="{{ page.previous.title }}">{{ page.previous.title | truncatewords: 15 }}</a>
+			«&nbsp;<a href="{{ page.next.url }}/" rel="previous" title="{{ page.next.title }}">{{ page.next.title | truncatewords: 15 }}</a>
 				</p>
 			{% endif %}
-			{% if page.next.url %}
+			{% if page.previous.url %}
 				<p class="next">
-					<a href="{{ page.next.url }}/" rel="next" title="{{ page.next.title }}">{{ page.next.title | truncatewords: 15 }}</a>&nbsp;»
+					<a href="{{ page.previous.url }}/" rel="next" title="{{ page.previous.title }}">{{ page.previous.title | truncatewords: 15 }}</a>&nbsp;»
 				</p>
 			{% endif %}
 		  </div>
-	  </section>-->
+	  </section>
       <section class="disqus">
         <div id="disqus_thread"></div>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

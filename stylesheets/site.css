@@ -801,6 +801,15 @@ q.single:after{content:"'";}
 }
 
 
+.post_nav .previous {
+	position:absolute;
+}
+
+.prev_next .next {
+	text-align:right;
+}
+
+
 pre.no-height{max-height:none;}
 
 section.main h2.terms{font-size:16px;}
