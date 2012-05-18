@@ -73,4 +73,14 @@ You will receive the following JSON response:
 
 {% endhighlight %}
 
-**Congratulations!** you have perfromed your first buying operation using the MELI APIs
+**Congratulations!** you have perfromed your first buying operation using the MELI APIs.    
+
+You can check the status of your order anytime by calling the orders api as follows:
+
+{% highlight javascript %}
+
+
+
+
+
+{% endhighlight %}
