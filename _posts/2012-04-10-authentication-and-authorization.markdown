@@ -50,7 +50,7 @@ If the user grants your application the requested data permission the OAuth Dial
 	
 Using this code you can perform the next step: app authentication. After your application has been authenticated you will receive an access code which you can use when making calls to the API. In order to authenticate your app you have to submit your authorization code and app secret to the token endpoint at the address:
 
-The app secret can be viewed when you log in to our [Applications Portal](http://applications.mercadolibre.com.ar/home), you should never share your application secret with anyone. To authenticate your app you must pass the right parameters to the following URL:
+The app secret can be viewed when you log in to our [Applications Portal](http://applications.mercadolibre.com.ar/home), you should never share your application secret with anyone. To authenticate your app you must pass the right parameters and make a *POST* to the following URL:
 
 	https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=SECRET_CODE
 	
