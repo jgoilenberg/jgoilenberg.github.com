@@ -10,6 +10,7 @@ guides:
 - Search
 - Contact
 - Appendix
+- Manage your Orders
 ---
 
 # Guides & SDKs
