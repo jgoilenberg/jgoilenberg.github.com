@@ -4,7 +4,6 @@ title: Searching
 categories: guides
 tags: 
 - Buying
-- Searching
 ---
 
 # Searching

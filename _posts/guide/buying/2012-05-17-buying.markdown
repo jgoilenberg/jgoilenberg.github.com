@@ -1,0 +1,26 @@
+---
+layout: 2columns
+title: Buying 
+categories: guides
+tags: Buying
+---
+
+# Buying
+
+Before buying make sure you have the `item_id` of the product you're trying to purchase. If this is not the case, you can perform a [search](/search) to retrieve the corresponding ID needed to perform the operation.
+
+You should be ready to buy your item. You can use the code below as a reference:
+
+
+<pre class="terminal">
+
+curl -X POST -H "Content-Type: application/json" -d
+'{ "order_items":[
+	{"item_id":$ITEM_ID,
+	 "quantity": 1
+	}
+	] 
+}'
+https://api.mercadolibre.com/orders?access_token=$ACCESS_TOKEN  
+</pre>
+

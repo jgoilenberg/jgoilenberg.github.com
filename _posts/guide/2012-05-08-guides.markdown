@@ -5,10 +5,10 @@ categories: tutorials popular
 guides: 
 - SDKs
 - Searching
-#- Buying
+- Buying
 - Selling
 - Contact
-#- My Publications
+- My Publications
 #- My sales
 - Users
 #- Alerts (feeds)
@@ -21,12 +21,12 @@ This describes the resources that make up the official MELI API. If
 you have any problems or requests please contact
 [support](mailto:developers@mercadolibre.com?subject=Meli-API).
 
-**Note:** This API is in a beta state. Breaking changes may occur.
+**Note:** This API is in a beta state. Changes may occur.
 
 
 {% for guide in page.guides %}
 ## {{ guide }}
-{% for page in site.tags.[guide] %}
+{% for page in site.tags.[guide] reversed %}
 [{{page.title}}]({{page.url}}).
 {% endfor %}
 {% endfor %}
