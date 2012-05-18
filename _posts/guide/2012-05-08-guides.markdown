@@ -9,11 +9,10 @@ guides:
 - Selling
 - Contact
 #- My Publications
-#- My sales
+- My Orders
 - Users
 #- Alerts (feeds)
 - Appendix
-- Manage your Orders
 ---
 
 # Guides & SDKs
