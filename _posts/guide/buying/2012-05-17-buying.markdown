@@ -31,7 +31,7 @@ You will receive the following JSON response:
 {% highlight javascript %}
 
 { id: 715802689,
-  status: 'closed',
+  status: 'confirmed',
   status_detail: null,
   date_created: '2012-05-17T17:16:06.194-04:00',
   date_closed: '2012-05-17T17:16:06.129-04:00',
@@ -56,7 +56,8 @@ You will receive the following JSON response:
         extension: null },
      first_name: 'Test user',
      last_name: 'Test',
-     billing_info: null },
+     billing_info: null
+  },
   seller: 
    { id: 8035443,
      nickname: 'MARCOS2-TEST',
@@ -68,7 +69,7 @@ You will receive the following JSON response:
      first_name: 'Marcos',
      last_name: 'Test' },
   payments: [],
-  feedback: { sent: null, received: null },
+  feedback: { purchase: null, sale: null },
   shipping: { status: 'to_be_agreed' } }
 
 {% endhighlight %}
