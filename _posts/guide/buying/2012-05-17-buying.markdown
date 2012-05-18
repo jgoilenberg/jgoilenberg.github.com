@@ -56,8 +56,7 @@ You will receive the following JSON response:
         extension: null },
      first_name: 'Test user',
      last_name: 'Test',
-     billing_info: null
-  },
+     billing_info: null },
   seller: 
    { id: 8035443,
      nickname: 'MARCOS2-TEST',
