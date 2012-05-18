@@ -669,7 +669,9 @@ section.main .home-list p.updated {
 	font-style: normal;
 }
 
-
+.error404 {
+	color: #ccc;
+}
 
 
 
