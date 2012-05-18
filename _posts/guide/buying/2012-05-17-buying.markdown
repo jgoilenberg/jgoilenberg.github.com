@@ -77,10 +77,7 @@ You will receive the following JSON response:
 
 You can check the status of your order anytime by calling the orders api as follows:
 
-{% highlight javascript %}
+<pre class="terminal">
 
-
-
-
-
-{% endhighlight %}
+curl https://api.mercadolibre.com/orders/$ORDER_ID?access_token=$ACCESS_TOKEN  
+</pre>
