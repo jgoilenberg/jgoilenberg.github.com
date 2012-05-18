@@ -16,7 +16,7 @@ You should be ready to buy your item. You can use the code below as a reference:
 
 curl -X POST -H "Content-Type: application/json" -d
 '{ "order_items":[
-	{"item_id":$ITEM_ID,
+	{ "item_id":$ITEM_ID,
 	 "quantity": 1
 	}
 	] 
@@ -24,3 +24,53 @@ curl -X POST -H "Content-Type: application/json" -d
 https://api.mercadolibre.com/orders?access_token=$ACCESS_TOKEN  
 </pre>
 
+You will receive the following JSON response:
+
+
+
+{% highlight javascript %}
+
+{ id: 715802689,
+  status: 'closed',
+  status_detail: null,
+  date_created: '2012-05-17T17:16:06.194-04:00',
+  date_closed: '2012-05-17T17:16:06.129-04:00',
+  order_items: 
+   [ { item: 
+        { id: '$ITEM_ID',
+          title: 'Test Item',
+          variation_id: null,
+          variation_attributes: [] },
+       quantity: 1,
+       unit_price: 50,
+       currency_id: 'ARS' } ],
+  total_amount: 50,
+  currency_id: 'ARS',
+  buyer: 
+   { id: 109665797,
+     nickname: 'MARCOS1TEST',
+     email: '',
+     phone: 
+      { area_code: ' ',
+        number: '22212312',
+        extension: null },
+     first_name: 'Test user',
+     last_name: 'Test',
+     billing_info: null },
+  seller: 
+   { id: 8035443,
+     nickname: 'MARCOS2-TEST',
+     email: 'marcostest@mercadolibre.com"',
+     phone: 
+      { area_code: '011',
+        number: '222313212',
+        extension: null },
+     first_name: 'Marcos',
+     last_name: 'Test' },
+  payments: [],
+  feedback: { sent: null, received: null },
+  shipping: { status: 'to_be_agreed' } }
+
+{% endhighlight %}
+
+**Congratulations!** you have perfromed your first buying operation using the MELI APIs

@@ -41,20 +41,6 @@
 
       {{ content }}
 
-	  <section>
-		 <div class="prev_next post_nav">
-			{% if page.next.url %}
-				<p class="previous">
-			«&nbsp;<a href="{{ page.next.url }}/" rel="previous" title="{{ page.next.title }}">{{ page.next.title | truncatewords: 15 }}</a>
-				</p>
-			{% endif %}
-			{% if page.previous.url %}
-				<p class="next">
-					<a href="{{ page.previous.url }}/" rel="next" title="{{ page.previous.title }}">{{ page.previous.title | truncatewords: 15 }}</a>&nbsp;»
-				</p>
-			{% endif %}
-		  </div>
-	  </section>
       <section class="disqus">
         <div id="disqus_thread"></div>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
