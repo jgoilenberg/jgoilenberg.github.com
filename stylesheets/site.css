@@ -106,6 +106,14 @@ code.inline {
 code {
 	margin:2px;
 	padding:2px;
+    border: 1px solid #EAEAEA;
+	background-color: #F8F8F8;
+	border-radius: 3px;
+}
+
+.javascript {
+   border: none;
+
 }
 
 h3 {
@@ -790,6 +798,19 @@ q.single:after{content:"'";}
 	
 .demo-buy iframe{
 	height:200px;
+}
+
+
+.post_nav {
+	height:20px;
+}
+
+.post_nav .previous {
+	position:absolute;
+}
+
+.prev_next .next {
+	text-align:right;
 }
 
 

@@ -2,7 +2,7 @@
 layout: 2columns
 title: Design Considerations
 categories: tutorials popular
-tag: home
+tags: home
 ---
 
 # Design Considerations

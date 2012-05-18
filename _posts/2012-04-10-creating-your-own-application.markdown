@@ -2,7 +2,7 @@
 layout: 2columns
 title: Creating your own application
 categories: tutorials popular
-tag: home
+tags: home
 ---
 
 ## Creating your own application

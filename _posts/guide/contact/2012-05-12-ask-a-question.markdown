@@ -2,7 +2,7 @@
 layout: 2columns
 title: Ask a question
 categories: guides
-tag: Contact
+tags: Contact
 ---
 
 

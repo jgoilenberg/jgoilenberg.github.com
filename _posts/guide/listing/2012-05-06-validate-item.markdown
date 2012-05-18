@@ -2,7 +2,7 @@
 layout: 2columns
 title: Validate item
 categories: guides
-tag: Listing
+tags: Selling
 ---
 
 

@@ -2,7 +2,7 @@
 layout: 2columns
 title: Searching my own items
 categories: guides
-tag: Search
+tags: Searching
 ---
 
 A very common use case is to search and show your own items. You can do it very easily, just read the following tutorial.
