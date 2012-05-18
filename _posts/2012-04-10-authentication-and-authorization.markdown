@@ -52,7 +52,7 @@ Using this code you can perform the next step: app authentication. After your ap
 
 The app secret can be viewed when you log in to our [Applications Portal](http://applications.mercadolibre.com.ar/home), you should never share your application secret with anyone. To authenticate your app you must pass the right parameters and make a *POST* to the following URL:
 
-	https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=SECRET_CODE
+	https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=SECRET_CODE&redirect_uri=$APP_CALLBACK_URL
 	
 If your app is succesfully authenticated and the authorization code from the user is valid, the authorization server will return the access token. An example JSON response is:
 
