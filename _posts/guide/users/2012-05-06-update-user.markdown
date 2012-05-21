@@ -34,8 +34,7 @@ curl -X PUT -H "Content-Type: application/json" -d
           "corporate_name":"Acme",
           "brand_name":"Acme Company"
           },
-"mercadoenvios": "accepted",
-"immediate_payment": true
+"mercadoenvios": "accepted"
 }
 
 
