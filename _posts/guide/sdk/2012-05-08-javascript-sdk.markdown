@@ -13,7 +13,7 @@ It  hides all the complexity of OAuth 2.0 and lets you focus on writing applicat
 
 Just include the following source script in your application
 	
-	<script src="http://static.mlstatic.com/org-img/sdk/mercadolibre-1.0.1.js"/>
+	<script src="http://static.mlstatic.com/org-img/sdk/mercadolibre-1.0.1.js"></script>
 	
 Initialize the api with your client_id as follows:
 
@@ -26,10 +26,9 @@ That's it. Afterwards, this line of code will show the First Name of your regist
 
 {% highlight javascript %}
 MELI.get(
-  "/users/me",
-  function(msg) { alert("Hello "+data[2].first_name) }
+  "/users/me",{},
+    function(data) { alert("Hello "+data[2].first_name) }
 );
-
 {% endhighlight %}
 
 Under the hood, the JSSDK checks that:
@@ -39,10 +38,3 @@ Under the hood, the JSSDK checks that:
     
 If you want to contribute or you find something that needs to be fixed, just fork our SDK in [GitHub](https://github.com/mercadolibre/mercadolibre.js) and pull requests as needed or get in touch
 through our [contact](/discuss) page
-
-
-
-
-
-
-
