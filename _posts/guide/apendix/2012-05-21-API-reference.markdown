@@ -5,14 +5,16 @@ categories: guides
 tags: Appendix
 apis:
 - ["https://api.mercadolibre.com/applications/121", "Applications"]
+- ["https://api.mercadolibre.com/users/99580221/addresses", "Addresses"]
 - ["https://api.mercadolibre.com/sites/MLA/card_issuers", "Card issuers"]
-- ["https://api.mercadolibre.com/domains", "Catalog Domains"]
+- ["https://api.mercadolibre.com/categories/MLA87668/attributes", "Category Attributes"]
 - ["https://api.mercadolibre.com/domains/1", "Catalog Domains Attributes"]
+- ["https://api.mercadolibre.com/domains", "Catalog Domains"]
+- ["https://api.mercadolibre.com/sites/MLA/catalog_products/7710", "Catalog products"]
 - ["https://api.mercadolibre.com/sites/MLA/catalog_products/800767/reviews/search", "Catalog Reviews"]
 - ["https://api.mercadolibre.com/sites/MLA/catalog_products/816346/recommendations/search?site=MLA&amp;recommType=VISTOVIS", "Catalog Recomendation"]
 - ["https://api.mercadolibre.com/categories/MLA1071", "Categories"]
 - ["https://api.mercadolibre.com/sites/MLA/categories", "Categories Site"]
-- ["https://api.mercadolibre.com/users/99580221/addresses", "Addresses"]
 - ["https://api.mercadolibre.com/cities/TUxBQ0NBUGZlZG1sYQ", "Cities"]
 - ["https://api.mercadolibre.com/countries", "Countries"]
 - ["https://api.mercadolibre.com/currencies/USD", "Currencies"]
@@ -34,6 +36,7 @@ apis:
 - ["https://api.mercadolibre.com/payment_methods/MLAMC", "Payment methods"]
 - ["https://api.mercadolibre.com/sites/MLA/payment_methods", "Payment methods (MP)"]
 - ["https://api.mercadolibre.com/payment_types", "Payment types"]
+- ["https://api.mercadolibre.com/pictures/MLA719522498_032011", "Pictures"]
 - ["https://api.mercadolibre.com/users/89330146/promotion_pack_combos/124?caller.id=89330146", "Promotion pack combos"]
 - ["https://api.mercadolibre.com/users/2767066/promotion_packs?caller.id=2767066", "Promotion packs"]
 - ["https://api.mercadolibre.com/questions/1918461935", "Questions"]
@@ -49,9 +52,6 @@ apis:
 - ["https://api.mercadolibre.com/sites", "Sites"]
 - ["https://api.mercadolibre.com/sites/MLA/trends/search?category=MLA1042", "Trends"]
 - ["https://api.mercadolibre.com/users/20", "Users"]
-- ["https://api.mercadolibre.com/sites/MLA/catalog_products/7710", "Catalog products"]
-- ["https://api.mercadolibre.com/categories/MLA87668/attributes", "Category Attributes"]
-- ["https://api.mercadolibre.com/pictures/MLA719522498_032011", "Pictures"]
 ---
 
 
@@ -60,7 +60,6 @@ apis:
 This section contains a list of the MELI API's.
 
 ##APIs
-{% for api in page.apis %}
+{% for api in page.apis | sort %}
 [{{ api[1] }}]({{ api[0] }})
 {% endfor %}
-
