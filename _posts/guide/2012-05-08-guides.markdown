@@ -8,10 +8,10 @@ guides:
 #- Buying
 - Selling
 - Contact
-#- My Publications
+#- My Publicationsi
+- Notifications
 - My Orders
 - Users
-#- Alerts (feeds)
 - Appendix
 ---
 
