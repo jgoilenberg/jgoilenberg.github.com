@@ -31,7 +31,7 @@ You will receive the following JSON response:
 {% highlight javascript %}
 
 { id: 715802689,
-  status: 'closed',
+  status: 'confirmed',
   status_detail: null,
   date_created: '2012-05-17T17:16:06.194-04:00',
   date_closed: '2012-05-17T17:16:06.129-04:00',
@@ -68,7 +68,7 @@ You will receive the following JSON response:
      first_name: 'Marcos',
      last_name: 'Test' },
   payments: [],
-  feedback: { sent: null, received: null },
+  feedback: { purchase: null, sale: null },
   shipping: { status: 'to_be_agreed' } }
 
 {% endhighlight %}
@@ -77,10 +77,7 @@ You will receive the following JSON response:
 
 You can check the status of your order anytime by calling the orders api as follows:
 
-{% highlight javascript %}
+<pre class="terminal">
 
-
-
-
-
-{% endhighlight %}
+curl https://api.mercadolibre.com/orders/$ORDER_ID?access_token=$ACCESS_TOKEN  
+</pre>
