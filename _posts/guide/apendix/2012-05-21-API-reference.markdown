@@ -1,26 +1,26 @@
 ---
 layout: 1columns
 title: Appendix - API Reference
-#categories: guides
-#tags: Appendix
+categories: guides
+tags: Appendix
 apis:
 - ["https://api.mercadolibre.com/applications/121", "Applications"]
 - ["https://api.mercadolibre.com/sites/MLA/card_issuers", "Card issuers"]
 - ["https://api.mercadolibre.com/domains", "Catalog Domains"]
 - ["https://api.mercadolibre.com/domains/1", "Catalog Domains Attributes"]
 - ["https://api.mercadolibre.com/sites/MLA/catalog_products/800767/reviews/search", "Catalog Reviews"]
-- ["https://api.mercadolibre.com/sites/MLA/catalog_products/816346/recommendations/search?site=MLA&recommType=VISTOVIS", "Catalog Recomendation"]
+- ["https://api.mercadolibre.com/sites/MLA/catalog_products/816346/recommendations/search?site=MLA&amp;recommType=VISTOVIS", "Catalog Recomendation"]
 - ["https://api.mercadolibre.com/categories/MLA1071", "Categories"]
 - ["https://api.mercadolibre.com/sites/MLA/categories", "Categories Site"]
 - ["https://api.mercadolibre.com/users/99580221/addresses", "Addresses"]
 - ["https://api.mercadolibre.com/cities/TUxBQ0NBUGZlZG1sYQ", "Cities"]
 - ["https://api.mercadolibre.com/countries", "Countries"]
 - ["https://api.mercadolibre.com/currencies/USD", "Currencies"]
-- ["https://api.mercadolibre.com/currency_conversions/search?from=ARS&to=USD", "Currency conversions"]
+- ["https://api.mercadolibre.com/currency_conversions/search?from=ARS&amp;to=USD", "Currency conversions"]
 - ["https://api.mercadolibre.com/sites/MLA/deals", "Deals"]
 - ["https://api.mercadolibre.com/sites/MLA/featured_items/HP", "Featured Items"]
 - ["https://api.mercadolibre.com/geolocation/ip/200.1.1.1", "Geolocation"]
-- ["https://api.mercadolibre.com/sites/MLA/hot_items/search?limit=5&category=MLA1743", "Hot Items"]
+- ["https://api.mercadolibre.com/sites/MLA/hot_items/search?limit=5&amp;category=MLA1743", "Hot Items"]
 - ["https://api.mercadolibre.com/items/MLA87828458", "Items"]
 - ["https://api.mercadolibre.com/sites/MLA/listing_types", "Listing Types"]
 - ["https://api.mercadolibre.com/sites/MLA/listing_exposures", "Listing exposures"]
@@ -57,13 +57,10 @@ apis:
 
 # API Reference
 
-This section contains a list of the MELI API's. The list below:
+This section contains a list of the MELI API's.
 
-<table>
+##APIs
 {% for api in page.apis %}
-{% tablerow row in api cols: 2 %}
-{% raw %} {{ row }} {% endraw %}
-{% endtablerow %}
+[{{ api[1] }}]({{ api[0] }})
 {% endfor %}
-</table>
 
