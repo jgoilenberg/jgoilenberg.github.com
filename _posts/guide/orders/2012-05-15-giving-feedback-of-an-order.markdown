@@ -2,7 +2,7 @@
 layout: 2columns
 title: Giving feedback to an order
 categories: guides
-tag: My Orders, ebuilders
+tag: My Orders
 ---
 
 #Feedback API

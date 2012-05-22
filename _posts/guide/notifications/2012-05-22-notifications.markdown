@@ -1,8 +1,8 @@
 ---
 layout: 2columns
-title: What are the Notifications?
+	title: What are the Notifications?
 categories: guides
-tag: Notifications, ebuilders
+tag: Notifications
 ---
 
 #Notifications
