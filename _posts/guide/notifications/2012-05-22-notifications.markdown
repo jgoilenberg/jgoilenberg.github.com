@@ -46,8 +46,9 @@ _If you haven't created your App yet go to [Creating your app section] (http://d
 
 > NOTE: All the applications subscribed to the question feed will receive notifications for every answer the seller sends.
 
+![App create](/images/application-topics.png)
 
-###Considerations receiving notifications: {#considerations}
+##Considerations receiving notifications {#considerations}
 * Messages will be sent out and retried during 12 hours. After that period, if not accepted by the app, they will be discarded.
 
 * Your application must acknowledge the reception with an HTTP status code 200, otherwise the message will be considered not delivered and it will be retried.
@@ -55,7 +56,7 @@ _If you haven't created your App yet go to [Creating your app section] (http://d
 * Your application must send a response within 20 seconds, otherwise it will timeout considered not delivered and retried.
 
 
-##What events trigger Notfications?
+##What events trigger Notifications?
 
 ###orders
 — Stock decremented: Somebody purchased one of your items and decremented the stock. A new order has been created.
@@ -116,4 +117,21 @@ _If you haven't created your App yet go to [Creating your app section] (http://d
 {% endhighlight %}
 
 > NOTE: The resource path is relative to MercadoLibre API base path: http://api.mercadolibre.com
+
+##Get the updated resource
+After receiving a notification of one the topics, you need to do a GET on the corresponding API resource to get the data:
+
+GET the order
+
+<pre class="terminal">https://api.mercadolibre.com/orders/ORDER_ID?access_token=ACCESS_TOKEN</pre>
+
+
+GET the item
+<pre class="terminal">https://api.mercadolibre.com/items/ITEM_ID?access_token=ACCESS_TOKEN</pre>
+
+
+GET the question
+<pre class="terminal">https://api.mercadolibre.com/questions/QUESTION_ID?access_token=ACCESS_TOKEN</pre>
+
+
 
