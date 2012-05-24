@@ -2,7 +2,7 @@
 layout: 2columns
 title: Pausing an item
 categories: guides
-tag: Manage your Orders
+tag: Selling
 ---
 #Pausing an item
 

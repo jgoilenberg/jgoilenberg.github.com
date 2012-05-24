@@ -1,15 +1,17 @@
 ---
 layout: 2columns
-	title: What are the Notifications?
+title: Listening to Notifications
 categories: guides
 tag: Notifications
 ---
 
 #Notifications
 
-Listening to Notifications give you the ability to have a real-time feed of the changes that occur on the different resources of the MercadoLibre platform.
-	If you published an item and it has been paused because or someone made you a question, purchase your item or even paid for it and requested a shipping, you will receive a Notification.
-	Notifications are a very convenient way of stay up-to-date with everything that you care, in a very efficient way for your app, without having to query our APIs on a constant basis.
+Listening to Notifications gives you the ability to have a real-time feed of the changes that occur on the different resources of the MercadoLibre API.
+
+For example if you published an item and later it was paused, someone made you a question, purchase your item or even paid for it and requested a shipping; you will receive a Notification of a change on the resource.
+
+Notifications are a very convenient way to stay up-to-date with everything that you care, in the most efficient way for you, without having to query our APIs on a constant basis. You only get notified of the resource that changed.
 
 
 ## Table of Contents 
@@ -17,10 +19,9 @@ Listening to Notifications give you the ability to have a real-time feed of the 
 - [Available Topics](#topics)
 - [Considerations](#considerations)
 - [Structure of Notifications](#structure)
-+ [Purchase](#purchase)
-+ [Payment](#payment)
-+ [Feedback](#feedback)
-+ [Questions](#questions)
++ [Order topic](#order)
++ [Questions topic](#questions)
++ [Items topic](#items)
 
 
 ---
@@ -34,10 +35,10 @@ _If you haven't created your App yet go to [Creating your app section] (http://d
   - **Topics** Comma separated list of 'topics' you want to subscribe to.
 
 ###Available Topics: {#topics}
-- **orders**  — To get notified of any 'news' on an order. e.g.: you received an order from a purchase, the buyer added shipping instructions or the buyer added a payment to an order.
+- **orders**  — To get notified of any change on one of your orders. e.g.: you received an order from a purchase, the buyer added shipping instructions or the buyer added a payment to an order.
 
 - **items**   — To get notified of any changes on an item you have published. 
-	e.g.: Due to infringement of one of MercadoLibre's rules your item was set to 'under_review' and paused. 
+	e.g.: Due to of MercadoLibre's rules your item was set to 'under_review'.
 	The seller changed any of an item's attribute (price, title, description) and all the application's subscribed to that seller's feed get notified of the change.
 	The 60 days period of a listing finished.
 
@@ -53,125 +54,66 @@ _If you haven't created your App yet go to [Creating your app section] (http://d
 
 * Your application must send a response within 20 seconds, otherwise it will timeout considered not delivered and retried.
 
-##Structure of the notifications {#structure}
 
-##Order
+##What events trigger Notfications?
 
-###Purchase {#purchase}
-When somebody purchase one of your items on sale, there is a notification with the buyer's details, the amount purchased, the item and so on.
+###orders
+— Stock decremented: Somebody purchased one of your items and decremented the stock. A new order has been created.
 
+— Payment: the buyer added a payment to the order.
+
+— Shipping: there is new shipping information associated to the order. Or the status of the shipping has changed to: pending, handling, active, delivered, not_delivered.
+
+— Feedback: the buyer rated you as a seller or you sent feedback to the buyer. A feed is received on the order.
+
+###items
+— Changes on any of the attributes.
+
+— Changes on the status: the listing has to be reviewed by an operator and the status changed to "under_review" or it was paused and status changed to "paused"
+
+— 60 days passed and the listing expired: status changed to "closed"
+
+###questions 
+— You received a new question.
+
+— You answered a question.
+
+— You deleted a question that you considered inappropriate.
+
+##JSON Structure of Notifications {#structure}
+
+##Order topic {#orders}
 {% highlight javascript %}
 {
-  "id":
-  "seller":{
-     "id":
-     "nickname":
-     "first_name":
-     "last_name":
-     "email":
-     "phone":{
-        "area_code":
-        "number":
-        "extension":
-     }
-  },
-  "buyer":{
-     "id":
-     "nickname":
-     "first_name":
-     "last_name":
-     "email":
-     "phone":{
-        "area_code":
-        "number":
-        "extension":
-     }
-     "billing_info":{
-        "doc_type":
-        "doc_number":
-     }
-  },
-  "order_items":[
-     {
-        "item":{
-            "id":
-            "title":
-        }
-        "quantity":
-        "unit_price":
-        "currency_id":
-        "variation_id":
-        "variation_attributes":
-     }
-
+  "user_id": 1234,
+  "resource": "/orders/139876",
+  "topic": "orders",
+  "received": "2011-10-19T16:38:34.425Z",
+  "sent" : "2011-10-19T16:40:34.425Z",
+}
 {% endhighlight %}
 
-
-###Payments {#payment}
-When the buyer pays the order using MercadoPago, an additional notification is generated with the payment details, associated to the order.
-
+##Item {#items}
 {% highlight javascript %}
-   {
-   "site_id":"MLA",
-   "date_created":"2012-05-22T00:03:02-04:00",
-   "date_approved":"2012-05-22T00:03:02-04:00",
-   "order_id":"192687833",
-   "date_last_updated":"2012-05-22T00:12:19-04:00",
-   "collector_id":9883470,
-   "payer_id":102456103,
-   "reason":"Casio Ef-527bk-1av Edifice Chronograph Mens Watch Ef527bk",
-   "transaction_amount":840.0,
-   "currency_id":"ARS",
-   "total_paid_amount":840.0,
-   "shipping_cost":0.0,
-   "status":"approved",
-   "status_detail":"accredited",
-   "marketplace":"MELI",
-   "operation_type":"regular_payment"
-   }
+{
+  "user_id": 1234,
+  "resource": "/items/MLB139876",
+  "topic": "items",
+  "received": "2011-10-19T16:38:34.425Z",
+  "sent" : "2011-10-19T16:40:34.425Z",
+}
 {% endhighlight %}
 
-###Feedback {#feedback}
-When the buyer rates the seller after the transaction is concluded or the seller rates a buyer.
-
+##Questions {#questions}
 {% highlight javascript %}
-  {
-   "item":{
-      "id":"MLB227638289",
-      "seller_id":74441846
-   },
-   "from":74441846,
-   "to":105185078,
-   "date_created":"2012-05-20T22:35:42-04:00",
-   "date_last_updated":"2012-05-22T00:12:04-04:00",
-   "fulfilled":false,
-   "reason":"THEY_DIDNT_ANSWER",
-   "rating":"negative",
-   "status":"active",
-   "message":"O usuário deu o lance, mas não efetuou o pagamento. Assim não concretizando a compra,",
-   "visibility_date":"2012-05-22T00:11:58-04:00",
-   "reply":null,
-   "reply_status":"",
-   "reply_date":null
-  }
+{
+  "user_id": 1234,
+  "resource": "/questions/139876",
+  "topic": "questions",
+  "received": "2011-10-19T16:38:34.425Z",
+  "sent" : "2011-10-19T16:40:34.425Z",
+}
 {% endhighlight %}
 
-## Questions {#questions}
-
-{% highlight javascript %}
-  {
-   "id":12154656,
-   "date_created":"2012-05-20T22:35:42-04:00",
-   "item_id":"MLB425068299",
-   "seller_id":123456,
-   "status":"answered",
-   "text":"OLÁ.. QUANTO FICA SEDEX PARA O CEP 83601-100? QUANTO TEMPO DE GARANTIA?OBRIGADO",
-   "answer": {
-      "date_created":"2012-05-21T22:35:42-04:00",
-      "status":"active",
-      "text":"Olá boa tarde, o valor do frete para todo o estado de PR é de R$ 35,00, via Sedex com seguro incluso, para cada unidade adquirida, este produto possui garantia de fabricação de um mês, o mesmo não é coberto em caso de mau uso como riscos, quedas, líquidos e etc. Nosso prazo de entrega é de dois dias úteis após a confirmação do seu pagamento. Aguardamos seu pedido. Obrigado."
-   }
-  }
-{% endhighlight %}
-
+> NOTE: The resource path is relative to MercadoLibre API base path: http://api.mercadolibre.com
 

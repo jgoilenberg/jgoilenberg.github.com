@@ -8,7 +8,7 @@ guides:
 #- Buying
 - Selling
 - Contact
-#- My Publicationsi
+#- My Publications
 - Notifications
 - My Orders
 - Users
