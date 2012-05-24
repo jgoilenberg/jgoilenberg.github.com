@@ -19,9 +19,9 @@ Notifications are a very convenient way to stay up-to-date with everything that 
 - [Available Topics](#topics)
 - [Considerations](#considerations)
 - [Structure of Notifications](#structure)
-+ [Order topic](#order)
-+ [Questions topic](#questions)
-+ [Items topic](#items)
++ [Order topic](#orders-topic)
++ [Questions topic](#questions-topic)
++ [Items topic](#items-topic)
 
 
 ---
@@ -82,7 +82,7 @@ _If you haven't created your App yet go to [Creating your app section] (http://d
 
 ##JSON Structure of Notifications {#structure}
 
-##Order topic {#orders}
+##Order topic {#orders-topic}
 {% highlight javascript %}
 {
   "user_id": 1234,
@@ -93,7 +93,7 @@ _If you haven't created your App yet go to [Creating your app section] (http://d
 }
 {% endhighlight %}
 
-##Item {#items}
+##Item topic {#items-topic}
 {% highlight javascript %}
 {
   "user_id": 1234,
@@ -104,7 +104,7 @@ _If you haven't created your App yet go to [Creating your app section] (http://d
 }
 {% endhighlight %}
 
-##Questions {#questions}
+##Questions topic {#questions-topic}
 {% highlight javascript %}
 {
   "user_id": 1234,
