@@ -27,7 +27,7 @@ https://api.mercadolibre.com/orders/ORDER_ID/feedback
 ##Parameters {#parameters}
 - `fulfilled` — If the transaction was fulfilled. Paid, shipped and accepted by the buyer. Must be true or false.
 - `rating` —  Rating given to the other party. Can be negative, neutral or positive.
-- `reason` — Reason for giving negative rating. Only accepted when rating is negative. *
+- `reason` — Reason for giving negative rating. Only accepted when rating is negative. 
 - `message` — A free text that adds to the rating. Maximum 160 characters.
 
 ## Possible Reasons for negative rating {#possible-reasons}

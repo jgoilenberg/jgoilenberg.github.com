@@ -2,7 +2,8 @@
 layout: 2columns
 title: Pausing an item
 categories: guides
-tag: Selling
+tags: 
+- My Publications
 ---
 #Pausing an item
 
