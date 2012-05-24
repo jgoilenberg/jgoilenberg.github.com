@@ -9,10 +9,9 @@ guides:
 - Selling
 - Contact
 - My Publications
-#- My sales
+- Notifications
 - My Orders
 - Users
-#- Alerts (feeds)
 - Appendix
 ---
 
