@@ -25,10 +25,10 @@ Seller’s and buyer’s score on MercadoLibre platform is calculated based on t
 https://api.mercadolibre.com/orders/ORDER_ID/feedback
 
 ##Parameters {#parameters}
-- `fulfilled` — If the transaction was fulfilled. Paid, shipped and accepted by the buyer. Must be true or false.
-- `rating` —  Rating given to the other party. Can be negative, neutral or positive.
-- `reason` — Reason for giving negative rating. Only accepted when rating is negative. 
-- `message` — A free text that adds to the rating. Maximum 160 characters.
+- `fulfilled` — If the transaction was fulfilled. Paid, shipped and accepted by the buyer. Must be true or false. (REQUIRED)
+- `rating` —  Rating given to the other party. Can be negative, neutral or positive. (REQUIRED)
+- `reason` — Reason for giving negative rating. Only accepted when rating is negative.  (REQUIRED if fulfilled=false)
+- `message` — A free text that adds to the rating. Maximum 160 characters. (REQUIRED)
 
 ## Possible Reasons for negative rating {#possible-reasons}
 * THEY_DIDNT_ANSWER
@@ -79,37 +79,60 @@ https://api.mercadolibre.com/orders/ORDER_ID/feedback/
 
 ##Reply a feedback {#reply-feedback}
 
-You can give a reply on the feedback that the other part gave to you, to explain your reasons.
+You can reply to some feedback that you received from the other part, to explain your reasons or give additional information to the other part.
 
+A reply is a POST request to this URL:
 {% highlight javascript %}
 https://api.mercadolibre.com/orders/<ORDER_ID>/feedback/<EXPERIENCE>
 {% endhighlight %}
 
-###Experience can be: **sale** or **purchase**, depending if you are selling or buying, respectively.
+###IMPORTANT NOTE:
+Experience can be: **sale** or **purchase**, depending on what is the other part ROLE. Because you are replying to some feedback you received previously.
 
-As a seller you can send a POST request like this:
+EXAMPLES:
+
+- As a **SELLER** you can send a POST request to a purchase feedback:
 
 {% highlight javascript %}
 {"reply": "The size was detailed in the description, however if you send it back we can refund you the money." }
 
-https://api.mercadolibre.com/orders/ORDER_ID/feedback/sale
+https://api.mercadolibre.com/orders/ORDER_ID/feedback/purchase?access_token={aSellersAccessToken}
 {% endhighlight %}
 
+- As a **BUYER** you can send a POST request to a sale feedback:
+{% highlight javascript %}
+{"reply": "I expected you to send me the correct size from the start." }
+
+https://api.mercadolibre.com/orders/ORDER_ID/feedback/sale?access_token={aBuyersAccessToken}
+{% endhighlight %}
 
 
 ##Changing a feedback {#change-feedback}
 
-You can change a feedback because you change your mind.
+You can change a feedback if you change your mind.
+
 Example: Upon receiving the money back from the seller you decide to change a negative feedback to neutral.
 
-A buyer would send a PUT request like this:
+A buyer should send a PUT request like this:
 
 {% highlight javascript %}
 {
 "rating":"NEUTRAL","fulfilled":false,"message":"I received the money back"
 }
 
-https://api.mercadolibre.com/orders/ORDER_ID/feedback/purchase
+https://api.mercadolibre.com/orders/ORDER_ID/feedback/purchase?access_token={aBuyersAccessToken}
 {% endhighlight %}
+
+
+A seller, on the contrary should send a PUT request to:
+
+{% highlight javascript %}
+{
+"rating":"NEUTRAL","fulfilled":false,"message":"OK I will change the feedback"
+}
+
+https://api.mercadolibre.com/orders/ORDER_ID/feedback/sale?access_token={aSellersAccessToken}
+{% endhighlight %}
+
 
 
