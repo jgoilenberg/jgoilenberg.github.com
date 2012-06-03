@@ -15,7 +15,7 @@ Just include the following source script in your application
 	
 	<script src="http://static.mlstatic.com/org-img/sdk/mercadolibre-1.0.1.js"></script>
 	
-Initialize the api with your client_id as follows:
+Initialize the API with your client_id as follows:
 
 {% highlight javascript %}
 MELI.init({client_id: 6586});
