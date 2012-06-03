@@ -9,7 +9,7 @@ tag: My Orders
 
 ##Overview
 After completing a sale and a purchase, according to MercadoLibre’s rules, each part has to provide feedback about the transaction (an order).
-This feedback says if the order was fulfilled and the seller and buyer rate each others respectively.
+This feedback says if the order was fulfilled and the seller and buyer rate each other respectively.
 Seller’s and buyer’s score on MercadoLibre platform is calculated based on these ratings.
 
 ## Table of Contents
