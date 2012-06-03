@@ -6,7 +6,7 @@ tag: Users
 ---
 
 #Update your Information
-You can update your information in case it were incomplete.
+You can update your information in case it was incomplete.
 This is a common issue, when you register in MELI you aren’t asked to fill your address or personal identification, but you need to have this fields completed at the time of listing.
 
 If you want to update your information, you should send a PUT to the Users API:
@@ -43,4 +43,4 @@ https://api.mercadolibre.com/users/<YOUR_USER_ID>?access_token=<ACCESS_TOKEN>
 
 The previous example shows the complete list of fields that can be updated (You should only send the fields that you want to update).
 
-Congratulations, you can update you Information throw the Users API!
+Congratulations, you can update you Information through the Users API!
