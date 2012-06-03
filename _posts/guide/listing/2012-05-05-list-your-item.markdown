@@ -11,7 +11,7 @@ tags: Selling
 You already know what items and attributes are. If you don’t know we recommend that you read the [Listings Introduction tutorial](/listing-introduction).
 
 
-So, let’s see how to list items in MELI. Don’t worry about the different attribute codes, we are going to explain each one latter.
+So, let’s see how to list items in MELI. Don’t worry about the different attribute codes, we are going to explain each one later.
 
 
 
@@ -46,7 +46,7 @@ curl -X POST -H "Content-Type: application/json" -d
 https://api.mercadolibre.com/items?access_token=$ACCESS_TOKEN  
 </pre>
 
-As you may suppose, each type of item has it's own attributes and restrictions when listing them. Please refer to the [API Appendinx](/guide-appendix) for more information 
+As you may guess, each type of item has its own attributes and restrictions when listing them. Please refer to the [API Appendix](/guide-appendix) for more information 
 about how to obtain and use these attributes.
 
 The Items API will automatically download the provided images to MELI Storage and creates a listing for your item. You will receive the following Json response:
@@ -64,9 +64,9 @@ The Items API will automatically download the provided images to MELI Storage an
 
 {% endhighlight %}
 
-**Congratulations!** You have just list your first item! You can access the Item’s VIP throw the permalink attribute.  
+**Congratulations!** You have just listed your first item! You can access the Item’s VIP through the permalink attribute.  
 
-If you have some questions regarding how to get your access token to list items, please refer to the [getting started](/getting-started) tutorial. In addition, if you wish to validate your item before listing, check out the [item validation](/validate-item) tutorial.    
+If you have questions regarding how to get your access token to list items, please refer to the [getting started](/getting-started) tutorial. In addition, if you wish to validate your item before listing, check out the [item validation](/validate-item) tutorial.    
     
 **Note:** If you get any errors trying to post your item, please refer to the [selling conditions](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=2407&categId=COST&type=FAQ) page. 
 
