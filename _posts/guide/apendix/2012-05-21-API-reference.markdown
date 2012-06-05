@@ -48,7 +48,7 @@ apis:
 - ["https://api.mercadolibre.com/sites/MLA/metatags/SEARCH", "SEO SEARCH"]
 - ["https://api.mercadolibre.com/shipping_methods/100009", "Shipping"]
 - ["https://api.mercadolibre.com/site_domains/www.mercadolibre.com.ar", "Site domains"]
-- ["https://api.mercadolibre.com/sites/MLA", "Site Desciption"]
+- ["https://api.mercadolibre.com/sites/MLA", "Site Description"]
 - ["https://api.mercadolibre.com/sites", "Sites"]
 - ["https://api.mercadolibre.com/sites/MLA/trends/search?category=MLA1042", "Trends"]
 - ["https://api.mercadolibre.com/users/20", "Users"]

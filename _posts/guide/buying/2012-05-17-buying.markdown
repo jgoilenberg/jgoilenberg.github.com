@@ -7,7 +7,7 @@ tags: Buying
 
 # Buying
 
-Before buying make sure you have the `item_id` of the product you're trying to purchase. If this is not the case, you can perform a [search](/search) to retrieve the corresponding ID needed to perform the operation.
+Before buying make sure you have the `item_id` of the item you're trying to purchase. If this is not the case, you can perform a [search](/search) to retrieve the corresponding ID needed to perform the operation.
 
 You should be ready to buy your item. You can use the code below as a reference:
 
@@ -73,9 +73,9 @@ You will receive the following JSON response:
 
 {% endhighlight %}
 
-**Congratulations!** you have perfromed your first buying operation using the MELI APIs.    
+**Congratulations!** you have performed your first buying operation using the MELI APIs.    
 
-You can check the status of your order anytime by calling the orders api as follows:
+You can check the status of your order anytime by calling the orders API as follows:
 
 <pre class="terminal">
 
