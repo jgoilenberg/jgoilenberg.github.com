@@ -133,7 +133,7 @@ MercadoLibre's APIs work with the <a href="http://en.wikipedia.org/wiki/Oauth" t
 
 There are certain actions that require you to identify as a MercadoLibre user (ie: listing a real estate property). To successfully accomplish this actions, you must get an access token that will allow you to identify your user when interacting with the APIs, for a determined amount of time (after which you will have to get a new access token).
 
-### Getting an access token for your registered user ### {#accesstokenregistereduser}
+### Get an access token for your registered user ### {#accesstokenregistereduser}
 
 If your APP will list properties **only on behalf your registered user**, then follow the following steps to get an access token. However, **if you want your APP to list properties on behalf other users**, then follow the steps in the [Getting an access token for other users section](#accesstokenotherusers).
 
@@ -167,7 +167,7 @@ You will receive a response body in a JSON format with the following layout:
 *YOUR_NEW_ACCESS_TOKEN* is now the access token required to interact with the APIs to list a real estate property. Keep in mind that this token will expire after the "expires_in" amount of seconds. Once expired your access token will no longer be valid and you will have to send a new request to the OAuth API to get a new access token.
 
 
-### Getting an access token for other users ### {#accesstokenotherusers}
+### Get an access token for other users ### {#accesstokenotherusers}
 
 If your APP will list properties **on behalf other users**, then follow the following steps to get an access token. However, **if you want your APP to list properties only on behalf your registered user**, then follow the steps in the previous [Getting an access token for your registered user section](#accesstokenregistereduser).
 
@@ -541,7 +541,7 @@ JSON example:
 {% endhighlight %}
 Note: the value passed in the "status" key is case sensitive and thus must be sent in lowercase.
 
-Relisting your properties {#relist}
+Relist your properties {#relist}
 -------------------------
 
 Real estate listings have an expiration date on MercadoLibre. This expiration date is usually two months since the activation date. Once an item has reached its expiration date, it will be automatically finalized and will no longer be visible to other users. When this ocurrs, you may choose to relist your property so that it becomes active again. Relisting implies the creation of a NEW item with the exact same elements as its parent.
