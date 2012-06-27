@@ -135,7 +135,7 @@ There are certain actions that require you to identify as a MercadoLibre user (i
 
 ### Get an access token for your registered user ### {#accesstokenregistereduser}
 
-If your APP will list properties **only on behalf your registered user**, then follow the following steps to get an access token. However, **if you want your APP to list properties on behalf other users**, then follow the steps in the [Getting an access token for other users section](#accesstokenotherusers).
+If your APP will list properties **only on behalf your registered user**, then follow the following steps to get an access token. However, **if you want your APP to list properties on behalf other users**, then follow the steps in the [Get an access token for other users section](#accesstokenotherusers).
 
 To get an access token you must send a POST request to the following URL:
 
@@ -169,7 +169,7 @@ You will receive a response body in a JSON format with the following layout:
 
 ### Get an access token for other users ### {#accesstokenotherusers}
 
-If your APP will list properties **on behalf other users**, then follow the following steps to get an access token. However, **if you want your APP to list properties only on behalf your registered user**, then follow the steps in the previous [Getting an access token for your registered user section](#accesstokenregistereduser).
+If your APP will list properties **on behalf other users**, then follow the following steps to get an access token. However, **if you want your APP to list properties only on behalf your registered user**, then follow the steps in the previous [Get an access token for your registered user section](#accesstokenregistereduser).
 
 Users on whose behalf you wish to list properties will have to grant permissions to allow your APP do so. This permission granting will only be needed once per user. To accomplish this, the user who wants to grant this permission must access the following URL:
 
