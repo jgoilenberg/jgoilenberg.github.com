@@ -40,7 +40,7 @@ The first step to list a real estate property, you must sign up to obtain a Merc
 
 <a href="http://www.mercadolibre.com" target="_blank">http://www.mercadolibre.com</a>
 
-Once there, click on the country you want to operate in and then click on the "Regístrate" button, as shown on figure 1.
+Once there, click on the country you want to operate in and then click on the "Reg&iacute;strate" button, as shown on figure 1.
 
 ![Register](/images/new-realestate-1.png){:style="width:700px;"}
 *<center>figure 1</center>*
@@ -78,7 +78,7 @@ If you are a real estate agency, you can identify your user as such to gain acce
 ![Help](/images/new-realestate-4.png){:style="width:700px;"}
 *<center>figure 4</center>*
 
-Once there, click on the "Tus datos y registración" tab and then on the "Registrarme como inmobiliaria" link, as shown on figure 5.
+Once there, click on the "Tus datos y registraci&oacute;n" tab and then on the "Registrarme como inmobiliaria" link, as shown on figure 5.
 
 ![Personal info](/images/new-realestate-5.png){:style="width:700px;"}
 *<center>figure 5</center>*
@@ -153,7 +153,7 @@ content-type: application/x-www-form-urlencoded
 </pre>
 
 You will receive a response body in a JSON format with the following layout:
-{% highlight json %}
+{% highlight javascript %}
 { 
 	"access_token":"YOUR_NEW_ACCESS_TOKEN",
 	"token_type":"bearer",
@@ -210,7 +210,7 @@ content-type: application/x-www-form-urlencoded
 </pre>
 
 You will receive a response body in a JSON format with the following layout:
-{% highlight json %}
+{% highlight javascript %}
 { 
 	"access_token" : "YOUR_NEW_ACCESS_TOKEN",
 	"token_type" : "bearer",
@@ -355,7 +355,7 @@ description			  |	(optional) You can include a description with additional infor
 
 JSON example:
 
-{% highlight json %}
+{% highlight javascript %}
 
 { 
   "site_id": "MLA",
@@ -489,7 +489,7 @@ In the request headers include:
 You must send a JSON formatted body with the elements you wish to modify.
 
 Example:
-{% highlight json %}
+{% highlight javascript %}
 { 
   "title": "Your new title",
   "price": 1000
@@ -510,7 +510,7 @@ To add new information to your property's description, you must send a POST requ
 
 In the request body you must send:
 
-{% highlight json %}
+{% highlight javascript %}
 {
   "text": "You additional description text."
 }
@@ -534,7 +534,7 @@ Possible values are:
 
 
 JSON example:
-{% highlight json %}
+{% highlight javascript %}
 {
   "status":"paused"
 }
@@ -573,7 +573,7 @@ In the request body you must send "price", "quantity" and "listing_type_id" for 
 
 JSON example:
 
-{% highlight json %}
+{% highlight javascript %}
 {
   "price": 20000,
   "quantity": 1
