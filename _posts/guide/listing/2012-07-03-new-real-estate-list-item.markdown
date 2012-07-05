@@ -225,6 +225,6 @@ You can now follow the instructions to:
 
 [Modify, pause or finalize your property publication](http://www.somelink.com)
 
-[Relist your properties](http://www.somelink.com)
+[Relist your properties](http://www.somelink.com) 
 
 Don't hesitate to contact us for further assistance, comments and feedback about this tutorial, etc. at <a href="mailto:developers_re@mercadolibre.com" target="_blank">developers_re@mercadolibre.com</a>. We will get back to you as soon as possible!
