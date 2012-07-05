@@ -10,9 +10,11 @@ tags: Selling
 Preconditions 	{#preconditions}
 ---------------------------------
 
-- ...
-- ...
-- ...
+To publish real estate properties using MELI's APIs, the following preconditions are necessary:
+
+Having a MELI registered user
+Having a MELI APP created
+Getting an access token (authentication)
 
 
 List your real estate property 	{#publish}
@@ -220,7 +222,7 @@ Note: after successfully listing an item, its status will be "not yet active" un
 
 You can now follow the instructions to:
 
-- Modify, pause or finalize your property publication
-- Relist your properties
+Modify, pause or finalize your property publication
+Relist your properties
 
 Don't hesitate to contact us for further assistance, comments and feedback about this tutorial, etc. at <a href="mailto:developers_re@mercadolibre.com" target="_blank">developers_re@mercadolibre.com</a>. We will get back to you as soon as possible!
