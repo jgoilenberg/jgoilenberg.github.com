@@ -82,10 +82,10 @@ You can list a real estate property by sending a POST request to our Items API w
 
 To complete the JSON with the necessary info, follow this steps:
 
-- 1\. Pictures upload (optional)
-- 2\. Category selection
-- 3\. Attributes selection
-- 4\. Location selection
+- 1\. [Pictures upload (optional)](http://www.somelink.com)
+- 2\. [Category selection](http://www.somelink.com)
+- 3\. [Attributes selection](http://www.somelink.com)
+- 4\. [Location selection](http://www.somelink.com)
 	
 	
 ### Putting together the publication JSON ###	{#puttingtoghetherJSON}
