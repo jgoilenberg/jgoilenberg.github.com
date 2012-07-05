@@ -18,7 +18,6 @@ To list a real estate property using MELI's APIs, the following preconditions ar
 
 [Getting an access token (authentication)](http://www.somelink.com)
 
-
 List your real estate property 	{#publish}
 ---------------------------------
 
@@ -116,7 +115,7 @@ description			  |	(optional) You can include a description with additional infor
 
 \*mandatory fields
 
-JSON example:
+**JSON example:**
 
 {% highlight javascript %}
 
@@ -206,9 +205,9 @@ In the request headers include:
 </pre>
 If the response status code is "200 OK" or "204 No content", then the JSON was successfully validated and your property is ready to be listed.
 
-Note: this validation process is not mandatory, but will most likely become handy when testing your APP. Keep in mind that there is no sandbox nor pre-production environment, so every property listed during your testing phase will be visible in our platform by all of our users. It is highly reccomended that you [finalize listed items](#finalize) posted while testing.
+Note: this validation process is not mandatory, but will most likely become handy when testing your APP. Keep in mind that there is no sandbox nor pre-production environment, so every property listed during your testing phase will be visible in our platform by all of our users. It is highly reccomended that you finalize listed items posted while testing.
 
-To list an item, POST the property JSON to the following URL:
+**To list an item, POST the property JSON to the following URL:**
 
 <pre class="terminal">
  https://api.mercadolibre.com/items?access_token=YOUR_ACCESS_TOKEN
@@ -224,7 +223,8 @@ If you were to receive an error status code on a response when communicating wit
 
 You can now follow the instructions to:
 
-Modify, pause or finalize your property publication
-Relist your properties
+[Modify, pause or finalize your property publication](http://www.somelink.com)
+
+[Relist your properties](http://www.somelink.com)
 
 Don't hesitate to contact us for further assistance, comments and feedback about this tutorial, etc. at <a href="mailto:developers_re@mercadolibre.com" target="_blank">developers_re@mercadolibre.com</a>. We will get back to you as soon as possible!
