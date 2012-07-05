@@ -12,9 +12,9 @@ Preconditions 	{#preconditions}
 
 To list a real estate property using MELI's APIs, the following preconditions are necessary:
 
-	Having a MELI registered user
-	Having a MELI APP created
-	Getting an access token (authentication)
+[Having a MELI registered user](http://www.somelink.com)
+[Having a MELI APP created](http://www.somelink.com)
+[Getting an access token (authentication)](http://www.somelink.com)
 
 
 List your real estate property 	{#publish}
