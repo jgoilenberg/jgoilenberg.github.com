@@ -5,37 +5,24 @@ categories: guides
 tags: Selling
 ---
 
-use_numbered_headers: true
-
 #Real estate listing
 
-The purpose of this tutorial is to provide a full guide on how to list real estate items using the MELI APIs platform. 
+Preconditions 	{#preconditions}
+---------------------------------
 
-* * *
-
-Table of contents: 
-
-* This list will contain the toc (it doesn't matter what you write here)
-{:toc}
-
-* * *
-
-
-About MercadoLibre's APIs. REST & JSON 		{#about}
---------------------------------------
-We have developed our APIs based on a <a href="http://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank"> REST architecture</a> via HTTP requests in a <a href="http://en.wikipedia.org/wiki/Json" target="_blank">JSON format</a>.
-
-Available REST operations for our APIs are: GET, POST, PUT & DELETE.
-
-Any REST Client can be used to send a request to a MercadoLibre API.
-
-Requests must be sent to a specific URL and contain certain headers (depending on the API). A message in a JSON format must be sent in the request body (except on GET requests).
-
-**If you were to receive an error status code on a response when communicating with our APIs, in most cases you will be able to determine the cause of the error by looking at the response body. In addition to the response status code, the response body will also contain detailed information regarding the error and will most likely help you understand how to solve different issues.**
+- ...
+- ...
+- ...
 
 
 List your real estate property 	{#publish}
 ---------------------------------
+
+We have developed our APIs based on a <a href="http://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank"> REST architecture</a> via HTTP requests in a <a href="http://en.wikipedia.org/wiki/Json" target="_blank">JSON format</a>.
+
+Available REST operations for our APIs are: GET, POST, PUT & DELETE.
+
+**If you were to receive an error status code on a response when communicating with our APIs, in most cases you will be able to determine the cause of the error by looking at the response body. In addition to the response status code, the response body will also contain detailed information regarding the error and will most likely help you understand how to solve different issues.**
 
 You can list a real estate property by sending a POST request to our Items API with the following JSON:
 
