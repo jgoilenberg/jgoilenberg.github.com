@@ -10,11 +10,11 @@ tags: Selling
 Preconditions 	{#preconditions}
 ---------------------------------
 
-To publish real estate properties using MELI's APIs, the following preconditions are necessary:
+To list a real estate property using MELI's APIs, the following preconditions are necessary:
 
-Having a MELI registered user
-Having a MELI APP created
-Getting an access token (authentication)
+	Having a MELI registered user
+	Having a MELI APP created
+	Getting an access token (authentication)
 
 
 List your real estate property 	{#publish}
@@ -23,8 +23,6 @@ List your real estate property 	{#publish}
 We have developed our APIs based on a <a href="http://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank"> REST architecture</a> via HTTP requests in a <a href="http://en.wikipedia.org/wiki/Json" target="_blank">JSON format</a>.
 
 Available REST operations for our APIs are: GET, POST, PUT & DELETE.
-
-**If you were to receive an error status code on a response when communicating with our APIs, in most cases you will be able to determine the cause of the error by looking at the response body. In addition to the response status code, the response body will also contain detailed information regarding the error and will most likely help you understand how to solve different issues.**
 
 You can list a real estate property by sending a POST request to our Items API with the following JSON:
 
@@ -219,6 +217,8 @@ If the property was successfully listed, you will receive a "201 Created" respon
 Note: after successfully listing an item, its status will be "not yet active" until it passes our security filters and automatically gets activated. This process should take no longer than an hour.
 
 **Congratulations! You have successfully finished the publication process of a real estate property using our APIs.**
+
+If you were to receive an error status code on a response when communicating with our APIs, in most cases you will be able to determine the cause of the error by looking at the response body. In addition to the response status code, the response body will also contain detailed information regarding the error and will most likely help you understand how to solve different issues.
 
 You can now follow the instructions to:
 
