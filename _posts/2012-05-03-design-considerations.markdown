@@ -13,6 +13,7 @@ There are some things you should know about our APIs to make your life easier.
 
 - [JSON](#json).
 - [JSONP](#jsonp).
+- [CORS](#cors).
 - [Date format (ISO 8601)](#iso8601)
 - [Handling errors](#error-format)
 - [Reducing responses](#selection).
@@ -82,6 +83,21 @@ As you can see, response is an array with 3 values:
 3. Body of the response
 
 **All JSONP responses will always be 200 OK. This is in order to give you the chance to handle 30x, 40x, and 50x responses on the client side. The real response data is in the array.**
+
+
+### CORS
+[Cross-origin resource sharing (CORS)](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) is a web browser technology specification which defines ways for a web server to allow its resources to be accessed by a web page from a different domain.
+This is a way to overcome the [same origin policy](http://en.wikipedia.org/wiki/Same_origin_policy).
+
+All the APIs return a special header:
+
+{% highlight http %}
+Access-Control-Allow-Origin: *
+{% endhighlight %}
+
+This allows the browser to access information provided by the API, even being in a different domain.
+
+All the major browsers have support for CORS.
 
 ## All dates are ISO 8601 encoded. {#iso8601}
 
