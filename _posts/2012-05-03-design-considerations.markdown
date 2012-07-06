@@ -99,6 +99,8 @@ This allows the browser to access information provided by the API, even being in
 
 All the major browsers have support for CORS.
 
+So basically this means that you **don't have to do anything** and you get to access the API directly from your browser doing regular ajax calls, with all the standard method, and avoid doing dirty things, like JSONP.
+
 ## All dates are ISO 8601 encoded. {#iso8601}
 
 We use [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) to encode dates in responses.
