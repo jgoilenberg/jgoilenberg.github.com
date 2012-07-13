@@ -41,4 +41,4 @@ A modal window will be displayed in which you will be required to complete some 
 
 After completing this information, choose any listing category and click on the "Continuar" button. Nothing further is required for this step. If you successfully reach the next listing step you are good to go.
 
-Congratulations! Your user is now allowed to list in MercadoLibre.
+**Congratulations! Your user is now allowed to list in MercadoLibre.**
