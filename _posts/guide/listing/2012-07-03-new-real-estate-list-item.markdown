@@ -10,9 +10,9 @@ tags: Selling
 Preconditions 	{#preconditions}
 ---------------------------------
 
-[Having a basic knowledge of REST](http://www.somelink.com)
+[Having a basic knowledge of REST and how MELI APIs work](http://www.somelink.com)
 
-[Having a MELI registered user](http://www.somelink.com)
+[Having a MELI signed up user](http://www.somelink.com)
 
 [Having a MELI APP created](http://www.somelink.com)
 
