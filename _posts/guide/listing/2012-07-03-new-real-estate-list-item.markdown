@@ -12,7 +12,7 @@ Preconditions 	{#preconditions}
 
 [Having a basic knowledge of REST and how MELI APIs work](http://www.somelink.com)
 
-[Having a MELI signed up user](http://www.somelink.com)
+[Having a MELI signed up user](/res-signup-user)
 
 [Having a MELI APP created](http://www.somelink.com)
 
@@ -26,7 +26,7 @@ You can list a real estate property by sending a POST request to our Items API w
 {% highlight javascript %}
 
 { 
-  "site_id": "MLA", <-- Indicates the country you're publishing in
+  "site_id": "MLA", <-- Indicates the country you are publishing in
   "title": "Property title",
   "category_id": "MLA1474", <-- Indicates the operation and property type
   "price": 50000,
