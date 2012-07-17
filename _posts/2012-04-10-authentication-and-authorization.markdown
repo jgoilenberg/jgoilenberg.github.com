@@ -12,10 +12,11 @@ A successful authentication flow results in your application obtaining a user ac
 
 ### Table of Contents
 - [Access token validity](#token-validity)
-- [User login](#user-login)
-- [Server side flow](#server-side-flow)
-- [Client side flow](#client-side-flow)
-- [Token refresh](#token-refresh)
+- [Steps obtaining an access token](#steps-obtaining-token)
+- [Scenarios](#scenarios)
+- [Web Server Applications](#webserver-applications)
+- [Refresh your token](#token-refresh)
+- [Client-side Applications using JavaScript](#client-side-flow)
 
 
 ##Access Token Validity & Expiration {#token-validity}
@@ -25,17 +26,41 @@ When you obtain an access token, it will be valid immediately and usable in requ
 There are also events which may cause an access token to become invalid before its expected expiry time. Such events include the user changing their password, an application refreshing it's App Secret. Dealing with varying access token expiry times, and handling the case when an access token becomes invalid before its expected expiry time is essential for building robust social experiences.
 
 
-## User Login {#user-login}
-The MELI API supports two different authentication flows: server-side and client-side. The server-side flow is used whenever you need to call the API from your webserver. If you want to interact with the API from a desktop or mobile application you should use the client-side flow.
-Regardless of the flow you use, our implementation of the OAuth 2.0 protocol involves three different steps: user authentication, app authorization and app authentication. User authentication ensures that the user is who he says he is, app authorization ensures that the user knows exactly what data and capabilllities they are providing to your app and app authentication ensures that the user is giving his information to your app and your app only. Once these steps are completed your app is issued an access token which you can use to access the user's information and take action on his behalf.
+## Steps obtaining an access token {#steps-obtaining-token}
+At a high level the OAuth 2.0 protocol involves three different steps: User Authentication (login), Application Authorization and Application Authentication.
+
+- **1. User Authentication:** ensure that the user is who he says he is. It is performed redirecting the user to MercadoLibre login URL.
+- **2. Application Authorization:** After login the user will see a page with exactly what data and capabilities is willing to grant your application permissions.
+In the OAuth protocol this is called "user consent".
+- **3. Application Authentication:** If the users agrees to grant your app those permissions, your application will be sent directly an access token or an authorization code (which later is used to obtain an access token).
+If the user does not grant permission, MercadoLibre OAuth API returns an error.
 
 
-## Server-side flow {#server-side-flow}
-User authentication and app authorization are handled at the same time by redirecting the user to our OAuth Dialog. When invoking this dialog, you must pass your client id that is generated when you create your application in our [Applications Portal](http://applications.mercadolibre.com.ar/home) (the client_id parameter) and the URL that the user's browser will be redirected to once app authorization is completed (the redirect_uri parameter).
+	Once your application is issued an access token, it can use it in a request to MercadoLibre APIs to request data that belongs to the user or take an action on his behalf.
+
+## Different Scenarios {#scenarios}
+The MELI API supports two different authentication flows: server-side and client-side.
+
+The server-side flow is used whenever you need to call the API from a Webserver Application and even access the API on behalf of the user when he is not in front of the browser. This is called offline access.
+
+If you want to interact with the API from a desktop or mobile application you should use the client-side flow.
+
+
+
+## Web Server Applications {#webserver-applications}
+User authentication and app authorization are handled at the same time by redirecting the user to our OAuth Dialog. As a result of the authorization, your application receives an authorization code (as opposed to directly delivering an access token).
+This authorization code can be exchanged later for an access token and a refresh token.
+
+If a refresh token is present in the authorization code exchange, then it may be used to obtain new access tokens at any time. This type of access to a Google API is called offline, since the user does not have to be present at the browser when the application obtains a new access token.
+
+ 
+When invoking this dialog, you must pass your client id that is generated when you create your application in our [Applications Portal](http://applications.mercadolibre.com.ar/home) (the client_id parameter) and the URL that the user's browser will be redirected to once app authorization is completed (the redirect_uri parameter).
 
 The URL should look like this:   
-
+{% highlight html %}
 	https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=Client_id&redirect_uri=REDIRECT_URL
+{% endhighlight %}
+
 
 When the user succesfully logged in a cookie will be stored on the user's computer. If the OAuth dialog is requested for a second time the dialog will not be shown but instead the cookie will be validated. When the dialog is shown the user is prompted to enter his credentials:
 
@@ -62,29 +87,82 @@ If your app is succesfully authenticated and the authorization code from the use
    "access_token" : "APP_USR-6092-3246532-cb45c82853f6e620bb0deda096b128d3-8035443",
    "token_type" : "bearer",
    "expires_in" : 10800,
-   "refresh_token" : "TG-1025633383c1a2f67323423423b05213abb",
    "scope" : "write read"
 }
 {% endhighlight %}
 
-Besides the access token, the response also contains the time in seconds the access token expires (the expires_in parameter). You can use the refresh token (the refresh_token) to get a new access token. Please use the following url to request a new access token using the refresh token:
+Besides the access token, the response also contains the time in seconds the access token expires (the expires_in parameter) and the scope given to the application on the applications creation details.
 
-## Client-side Flow {#client-side-flow}
-As with the server-flow, the client-side flow also uses the OAuth Dialog for user authentication and app authorization. The only difference is that you must remove the redirect_uri parameter. The URL should look like:
 
-	https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=Client_id
+## Refresh your access token (optional) {#token-refresh}
+Access tokens have an expiration time. Typically a webserver application will need to access MercadoLibre APIs at any time. This is called offline_access because the user does not have to be present at the browser when the application obtains a new access token.
 
-## Token refresh {#token-refresh}
-After the consumer has been authorized for access, they can use a refresh token to get a new access token (session ID.) This is only done after the consumer already has received an access token using either the Web server or user-agent flow. This becomes necessary when an access token is no longer valid and when you need to  apply for a new one.    
-    
-A consumer can use the refresh token to get a new session as needed.
+**How to obtain a refresh token?**
+
+After the consumer has been authorized for access, they can obtain a refresh token. The refresh token can be used to refresh a token once it has expired. This is only done after the consumer already has received an access token using either the Web server or user-agent flow.
+This becomes necessary when an access token is no longer valid and when you need to make it valid again.
+
+When you register your application in the [Applications Portal](http://applications.mercadolibre.com.ar/home) you need to give offline_access for this purpose.
+
+If you set it up this way, every time your webserver exchanges a code for an access_token it will also receive a refresh token.
+
+{% highlight javascript %}
+{
+   "access_token" : "APP_USR-6092-3246532-cb45c82853f6e620bb0deda096b128d3-8035443",
+   "token_type" : "bearer",
+   "expires_in" : 10800,
+   "refresh_token" : "TG-1025633383c1a2f67323423423b05213abb",
+   "scope" : "write read offline_access"
+}
+{% endhighlight %}
+
+
+Your application will need to save this refresh token along with the access token, as they work in pairs.
+Once the access token expires a consumer can use the refresh token to refresh that token and get a new *refresh_token* to refresh it again when it expires. 
+
 The consumer should make POST request to the token endpoint, with the following parameters:    
 
-- `grant_type` — Value must be refresh_token for this flow.
-- `refresh_token` — Refresh token from the approval step.
+- `grant_type` — "refresh_token".
+- `refresh_token` — The refresh token from the approval step.
 - `client_id` — Consumer key from the remote access application definition.
 - `client_secret` — Consumer secret from the remote access application definition.    
 
 		https://api.mercadolibre.com/oauth/token?grant_type=refresh_token&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&refresh_token=REFRESH_TOKEN
 		
+	The response includes the original access_token validated for 3 more hours and a new refresh token:
+{% highlight javascript %}
+{
+   "access_token" : "APP_USR-6092-3246532-cb45c82853f6e620bb0deda096b128d3-8035443",
+   "token_type" : "bearer",
+   "expires_in" : 10800,
+   "refresh_token" : "TG-5005b6b3e4b07e60756a3353",
+   "scope" : "write read offline_access"
+}
+{% endhighlight %}
+
+
+## Client-side Applications using JavaScript SDK {#client-side-flow}
+
+Our OAuth implementation also supports client-side applications (Javascript running on the browser). As with the server-flow, the client-side flow also starts with the OAuth Dialog for user authentication and app authorization.
+
+
+If you are going to choose this alternative, we strongly suggest you use the [Javascript SDK](http://developers.mercadolibre.com/javascript-sdk/). This SDK hides for you all the complexity of the OAuth protocol and it will save you lots of time.
+
+**How the client-side flow works**
+
+The main difference is that when the users grants your application with permission, MercadoLibre will give your application an access token (not a code).
+
+You don't need to pass your redirect URL. Just make a GET request to this URL:
+
+        https://auth.mercadolibre.com.ar/authorization?response_type=token&client_id=Client_id
+
+
+If your app is succesfully authenticated and the user grants permission (consent), the authorization server will redirect to your applications callback URL with an access token in the query string response like this:
+
+	http://YOUR_URL?access_token=APP_USR-6092-3246532-cb45c82853f6e620bb0deda096b128d3-8035443&token_type=bearer,expires_in=10800
+
+
+Keep in mind that using this flow you will not be able to obtain a refresh token. 
+Once the token expires, you will need to the redirect the user to the authorization URL again to obtain a full new access token.
+
 
