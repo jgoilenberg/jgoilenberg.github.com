@@ -16,7 +16,7 @@ A successful authentication flow results in your application obtaining a user ac
 - [Scenarios](#scenarios)
 - [Web Server Applications](#webserver-applications)
 - [Refresh your token](#token-refresh)
-- [Client-side Applications](#client-side-flow)
+- [Client-side Applications using JavaScript](#client-side-flow)
 
 
 ##Access Token Validity & Expiration {#token-validity}
@@ -141,7 +141,7 @@ The consumer should make POST request to the token endpoint, with the following 
 {% endhighlight %}
 
 
-## Client-side Applications {#client-side-flow}
+## Client-side Applications using JavaScript SDK {#client-side-flow}
 
 Our OAuth implementation also supports client-side applications (Javascript running on the browser). As with the server-flow, the client-side flow also starts with the OAuth Dialog for user authentication and app authorization.
 
