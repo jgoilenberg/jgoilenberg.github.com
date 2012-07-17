@@ -10,13 +10,13 @@ tags: Selling
 Preconditions 	{#preconditions}
 ---------------------------------
 
-[Having a basic knowledge of REST and how MELI APIs work](http://www.somelink.com)
+[Having a basic knowledge of REST and how MELI APIs work](/getting-started)
 
 [Having a MELI signed up user](/res-signup-user)
 
-[Having a MELI APP created](http://www.somelink.com)
+[Having a MELI APP created](/res-create-app)
 
-[Getting an access token (authentication)](http://www.somelink.com)
+[Getting an access token (authentication)](/res-authenticate)
 
 List your real estate property 	{#publish}
 ---------------------------------
@@ -96,12 +96,12 @@ You can list a real estate property by sending a POST request to our Items API w
 
 To complete the JSON with the necessary info, follow this steps:
 
-- 1\. [Pictures upload (optional)](http://www.somelink.com)
-- 2\. [Category selection](http://www.somelink.com)
-- 3\. [Location selection](http://www.somelink.com)
-- 4\. [Attributes selection](http://www.somelink.com)
+- 1\. [Pictures upload (optional)](/res-pic-upload)
+- 2\. [Category selection](/res-categ-selection)
+- 3\. [Location selection](/res-loc-selection)
+- 4\. [Attributes selection](/res-attrs-selection)
 	
-[Click here](http://thelink.com) to see the full specification of possible elements you can send in a real estate property JSON.
+[Click here](/res-json-full-specs) to see the full specification of possible elements you can send in a real estate property JSON.
 
 **To list a property, POST the JSON to the following URL:**
 
@@ -133,8 +133,8 @@ If you were to receive an error status code on a response when communicating wit
 
 You can now follow the instructions to:
 
-[Modify, pause or finalize your property publication](http://www.somelink.com)
+[Modify, pause or finalize your property publication](/res-modify-pause-finalize)
 
-[Relist your properties](http://www.somelink.com) 
+[Relist your properties](/res-relist) 
 
 Don't hesitate to contact us for further assistance, comments and feedback about this tutorial, etc. at <a href="mailto:developers_re@mercadolibre.com" target="_blank">developers_re@mercadolibre.com</a>. We will get back to you as soon as possible!
