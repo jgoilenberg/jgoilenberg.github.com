@@ -49,17 +49,39 @@ If you want to interact with the API from a desktop or mobile application you sh
 
 ## Web Server Applications {#webserver-applications}
 User authentication and app authorization are handled at the same time by redirecting the user to our OAuth Dialog. As a result of the authorization, your application receives an authorization code (as opposed to directly delivering an access token).
+
 This authorization code can be exchanged later for an access token and a refresh token.
 
-If a refresh token is present in the authorization code exchange, then it may be used to obtain new access tokens at any time. This type of access to a Google API is called offline, since the user does not have to be present at the browser when the application obtains a new access token.
+<h3>Overview</h3>
+![oauth-server-side](/images/ML-oauth-server-side.png)
+
+
+If a refresh token is present in the authorization code exchange, then it may be used to obtain new access tokens at any time. 
+This type of access to a Google API is called **offline**, since the user does not have to be present at the browser when the application obtains a new access token.
 
  
 When invoking this dialog, you must pass your client id that is generated when you create your application in our [Applications Portal](http://applications.mercadolibre.com.ar/home) (the client_id parameter) and the URL that the user's browser will be redirected to once app authorization is completed (the redirect_uri parameter).
 
-The URL should look like this:   
-{% highlight html %}
-	https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=Client_id&redirect_uri=REDIRECT_URL
-{% endhighlight %}
+<h3>Step 1: Obtain a code</h3>
+
+Make a GET request to this URL:   
+<pre>
+https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=Client_id&redirect_uri=REDIRECT_URL
+</pre>
+
+<h4>Parameters</h4>
+<ul class="ch-list parameters">                                                                         
+  <li>
+    <code>response_type</code>: <em class="string">code</em> — Indicates that the desired operation is to obtain an authentication code.
+  </li>
+  <li>
+    <code>client_id</code>: The client ID assigned to your app when created.
+  </li>
+  <li>
+    <code>redirect_uri</code>: <em class="string">URL</em> — The callback URL configured for your app, or one of the allowed domains.
+  </li>
+</ul>
+
 
 
 When the user succesfully logged in a cookie will be stored on the user's computer. If the OAuth dialog is requested for a second time the dialog will not be shown but instead the cookie will be validated. When the dialog is shown the user is prompted to enter his credentials:
@@ -73,11 +95,37 @@ If the user grants your application the requested data permission the OAuth Dial
 
 	http://YOUR_URL?code=SERVER_GENERATED_AUTHORIZATION_CODE
 	
+<h3>Step 2: Exchange the code for a token</h3>
+
 Using this code you can perform the next step: app authentication. After your application has been authenticated you will receive an access code which you can use when making calls to the API. In order to authenticate your app you have to submit your authorization code and app secret to the token endpoint at the address:
 
-The app secret can be viewed when you log in to our [Applications Portal](http://applications.mercadolibre.com.ar/home), you should never share your application secret with anyone. To authenticate your app you must pass the right parameters and make a *POST* to the following URL:
+The app secret can be viewed when you log in to our [Applications Portal](http://applications.mercadolibre.com.ar/home), you should never share your application secret with anyone. 
 
-	https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=SECRET_CODE&redirect_uri=$APP_CALLBACK_URL
+To authenticate your app and get a token make a *POST* to the following URL:
+
+<pre>
+https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=SECRET_CODE&redirect_uri=$APP_CALLBACK_URL
+</pre>
+
+<h4>Parameters</h4>
+<ul class="ch-list parameters">										
+  <li>
+    <code>grant_type</code>: <em class="string">authorization_code</em> — Indicates that the desired operation is to exchange the code for an access token.
+  </li>
+  <li>
+    <code>client_id</code>: The client ID assigned to your app when created.
+  </li>
+  <li>
+    <code>client_secret</code>: <em class="string">hash</em> — The secret generated to your app when created.
+  </li>
+  <li>
+    <code>code</code>: The authorization code obtain in the first step.
+  </li>
+  <li>
+    <code>redirect_uri</code>: <em class="string">URL</em> — The callback URL configured for your app, or one of the allowed domains.
+  </li>											
+</ul>
+
 	
 If your app is succesfully authenticated and the authorization code from the user is valid, the authorization server will return the access token. An example JSON response is:
 
@@ -122,14 +170,34 @@ Once the access token expires a consumer can use the refresh token to refresh th
 
 The consumer should make POST request to the token endpoint, with the following parameters:    
 
-- `grant_type` — "refresh_token".
-- `refresh_token` — The refresh token from the approval step.
-- `client_id` — Consumer key from the remote access application definition.
-- `client_secret` — Consumer secret from the remote access application definition.    
 
-		https://api.mercadolibre.com/oauth/token?grant_type=refresh_token&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&refresh_token=REFRESH_TOKEN
-		
-	The response includes the original access_token validated for 3 more hours and a new refresh token:
+<h4>URL to POST</h4>
+<pre>
+  https://api.mercadolibre.com/oauth/token?grant_type=refresh_token&client_id=&client_secret=&refresh_token=
+</pre>
+
+
+<h4>Parameters</h4>
+<ul class="ch-list parameters">
+  <li>
+  <code>grant_type</code>: <em class="string">refresh_token</em>  — Indicates the desired operation is to refresh a token.
+  </li>
+  <li>
+  <code>refresh_token</code>: The refresh token from the approval step.
+  </li>
+  <li>
+  <code>client_id</code> The client ID of your application.
+  </li>
+  <li>
+  <code>client_secret</code> The secret from the remote access application definition.
+  </li>
+</ul>
+  
+
+	
+<h4>Response</h4>	
+
+The response includes the original access_token validated for 3 more hours and a new refresh token:
 {% highlight javascript %}
 {
    "access_token" : "APP_USR-6092-3246532-cb45c82853f6e620bb0deda096b128d3-8035443",
