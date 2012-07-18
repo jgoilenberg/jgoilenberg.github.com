@@ -9,11 +9,12 @@ tags: pic-upload
 
 Pictures upload	{#picupload}
 ------------
-Pictures are optional when listing, but they make a big difference in the publication quality and results (visits and contacts), specially when talking about real estate properties. *<u>If you already have your pictures uploadad to an accesible web URL, you can then skip this picture uploading step</u> and send them directly as explained in the [Putting toghether the publishing JSON section](#puttingtoghetherJSON). However, if your pictures are stored locally, you will then have to upload them to our Pictures API, by sending a POST request to the following URL:
+Pictures are optional when listing, but they make a big difference in the publication quality and results (visits and contacts), specially when talking about real estate properties. *<u>If you already have your pictures uploadad to an accesible web URL, you can then skip this picture uploading step</u> and send these URLs directly as seen in the [JSON example](/new-real-estate-list-item). However, if your pictures are stored locally, you will then have to upload them to our Pictures API, by sending a POST request to the following URL:
 <pre class="terminal">
  https://api.mercadolibre.com/pictures?access_token=YOUR_ACCESS_TOKEN
 </pre>
-Remember *YOUR_ACCESS_TOKEN* is the necessary key to interact with cerain APIs, obtained in the previous [Authenticate section](#authenticate).
+
+Remember *YOUR_ACCESS_TOKEN* is the necessary key to interact with cerain APIs, obtained in the [Authenticate section](/res-authenticate).
 
 The request body is in this case a binary (instead of plain text), and the procedure varies according to the programming language you are working with.
 
@@ -26,10 +27,9 @@ The request sent must be a *multipart-mime* type and the content-type must also 
 </pre>
 Should you need to run some tests with this API, you can use the cURL command, as follows:
 
-curl -F file=@<*LOCAL_PICTURE*> https://api.mercadolibre.com/sites/SITE_ID/pictures?access_token=YOUR_ACCESS_TOKEN
+curl -F file=@<*LOCAL_PICTURE*> https://api.mercadolibre.com/pictures?access_token=YOUR_ACCESS_TOKEN
 
 *LOCAL_PICTURE* is the path and file name of the picture you wish to upload.
-*SITE_ID* is the ID of your country. You will see how to obtain this value in the next step (7.2 Category selection).
 
 If the picture was sucessfully uploaded you will receive a JSON response body, which contains an "id" element. Save the Picture ID value for every picture you upload, since you will be needing them later on, when putting together the JSON for publishing the property.
 

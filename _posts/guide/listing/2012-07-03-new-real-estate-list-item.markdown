@@ -127,9 +127,9 @@ If you want you can validate your JSON before actually listing it by sending it 
 
 If the response status code is "200 OK" or "204 No content", then the JSON was successfully validated and your property is ready to be listed.
 
-This validation process is not mandatory, but will most likely become handy when testing your APP. Keep in mind that there is no sandbox nor pre-production environment, so every property listed during your testing phase will be visible in our platform by all of our users. It is highly reccomended that you finalize listed items posted while testing.
+This validation process is not mandatory, but will most likely become handy when testing your APP. Keep in mind that there is no sandbox nor pre-production environment, so every property listed during your testing phase will be visible in our platform by all of our users. It is highly recommended that you finalize listed items posted while testing.
 
-If you were to receive an error status code on a response when communicating with our APIs, in most cases you will be able to determine the cause of the error by looking at the response body. In addition to the response status code, the response body will also contain detailed information regarding the error and will most likely help you understand how to solve different issues.
+If you were to receive an error status code on a response when communicating with our APIs, in most cases you will be able to determine the cause of the error by looking at the response body. In addition to the response status code, the response body will also contain detailed information regarding the error and will most likely help you understand the cause of it and how to solve different issues.
 
 You can now follow the instructions to:
 
