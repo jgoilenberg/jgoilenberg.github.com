@@ -9,7 +9,7 @@ tags: Advertising
 The way to modify your product ad is as follow.
 
 <pre class="terminal">
-curl -i -H "X-Caller-Scopes: mclics_admin"  -H "Content-Type: application/json" -X PUT -d "
+curl -i -H "Accept:application/json" -H "Content-Type: application/json" -X PUT -d "
 {
 	"adDailyBudget":"1",
 	"adID":"11130279",
@@ -27,7 +27,6 @@ curl -i -H "X-Caller-Scopes: mclics_admin"  -H "Content-Type: application/json" 
 	"type":"P",
 	"URLDestiny":"http://www.google.com.ar",
 	"URLVisible":"www.google.com.ar",
-	"image":"exampleImage.jpg",
 	"price":"15"
 }" 
 https://api.mercadolibre.com/mclics/productAd/11130279"
@@ -56,8 +55,7 @@ You will receive the following JSON response:
 		"title":"Title Test",
 		"type":"P",
 		"URLDestiny":"http://www.google.com.ar",
-		"URLVisible":"www.google.com.ar","image":
-		"exampleImage.jpg",
+		"URLVisible":"www.google.com.ar",
 		"price":"15"
 	}
 }
