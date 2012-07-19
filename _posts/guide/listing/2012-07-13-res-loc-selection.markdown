@@ -7,7 +7,7 @@ tags: loc-selection
 
 #Real estate listing
 
-Location selection	{#locationselection}
+Location selection	{#locationselection} 
 ------------------
 To list a real estate property, you will have to determine the property location, which includes state, city and in most cases neighborhood as well. To accomplish this access the following URL:
 

@@ -31,7 +31,7 @@ To modify a property, send a PUT request to the following URL:
 In the request headers include:
 <pre class="terminal">
  content-type: application/json
- accepts: application/json
+ accepts: application/json 
 </pre>
 
 You must send a JSON formatted body with the elements you wish to modify.

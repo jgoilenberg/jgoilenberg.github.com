@@ -13,7 +13,7 @@ To list a real estate property, you will have to choose the category which indic
 
 <a href="https://api.mercadolibre.com/sites" target="_blank">https://api.mercadolibre.com/sites</a>
 
-Once there you will be able to determine your SITE_ID, which is the "id" for your corresponding country.
+Once there you will be able to determine your SITE_ID, which is the "id" for your corresponding country. 
 
 Now that you have your SITE_ID, you can now access the following URL (by browser or by sending a GET request):
 

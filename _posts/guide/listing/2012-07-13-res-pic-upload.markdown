@@ -11,7 +11,7 @@ Pictures upload	{#picupload}
 ------------
 Pictures are optional when listing, but they make a big difference in the publication quality and results (visits and contacts), specially when talking about real estate properties. *<u>If you already have your pictures uploadad to an accesible web URL, you can then skip this picture uploading step</u> and send these URLs directly as seen in the [JSON example](/new-real-estate-list-item). However, if your pictures are stored locally, you will then have to upload them to our Pictures API, by sending a POST request to the following URL:
 <pre class="terminal">
- https://api.mercadolibre.com/pictures?access_token=YOUR_ACCESS_TOKEN
+ https://api.mercadolibre.com/pictures?access_token=YOUR_ACCESS_TOKEN 
 </pre>
 
 Remember *YOUR_ACCESS_TOKEN* is the necessary key to interact with cerain APIs, obtained in the [Authenticate section](/res-authenticate).

@@ -29,7 +29,7 @@ In the request headers include:
 
 <pre class="terminal">
 accepts: application/json
-content-type: application/x-www-form-urlencoded
+content-type: application/x-www-form-urlencoded 
 </pre>
 
 You will receive a response body in a JSON format with the following layout:

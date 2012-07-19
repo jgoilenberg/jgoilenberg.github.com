@@ -7,7 +7,7 @@ tags: attrs-selection
 
 #Real estate listing
 
-Attributes selection	{#attributesselection}
+Attributes selection	{#attributesselection} 
 --------------------
 When listing a property, its attributes will vary according to the chosen category. Once you have your Category ID, you can see its attributes by accessing the following URL:
 

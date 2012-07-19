@@ -30,7 +30,7 @@ description			  |	(optional) You can include a description with additional infor
 
 \*mandatory fields
 
-JSON example:
+JSON example: 
 
 {% highlight javascript %}
 

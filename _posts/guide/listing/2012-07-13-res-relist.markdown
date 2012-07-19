@@ -16,7 +16,7 @@ For your APP development, you might want to add a process that periodically chec
 
 To check the current status and expiration date of a listing, you must send a GET request to our items API to the following URL:
 
-<pre class="terminal">
+<pre class="terminal"> 
  https://api.mercadolibre.com/items/ITEM_ID
 </pre>
 
