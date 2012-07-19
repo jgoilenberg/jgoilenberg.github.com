@@ -9,7 +9,7 @@ tags: categ-selection
 
 Category selection	{#categselection}
 ------------------
-To list a real estate property you will have to choose the category which indicates the operation and property type your property will be listed in. First, determine the "SITE_ID" that corresponds to the country your user belongs to. To accomplish this go to the following URL:
+To list a real estate property, you will have to choose the category which indicates the operation and property type your property will be listed in. First, determine the "SITE_ID" that corresponds to the country your user belongs to. To accomplish this go to the following URL:
 
 <a href="https://api.mercadolibre.com/sites" target="_blank">https://api.mercadolibre.com/sites</a>
 

@@ -26,7 +26,7 @@ You can list a real estate property by sending a POST request to our Items API w
 {% highlight javascript %}
 
 { 
-  "site_id": "MLA", <-- Indicates the country you are publishing in
+  "site_id": "MLA", <-- Indicates the country you are listing in
   "title": "Property title",
   "category_id": "MLA1474", <-- Indicates the operation and property type
   "price": 50000,
