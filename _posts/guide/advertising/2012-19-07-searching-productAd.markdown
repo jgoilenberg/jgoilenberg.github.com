@@ -49,13 +49,16 @@ The other way of searching Product Ads is by Reference. With this service you ca
 
 <pre class="terminal">
 curl -i -H "X-Caller-Scopes: mclics_admin"
-https://api.mercadolibre.com/mclics/productAd/search?custId=66258610&refFrom=Prueba&refId=prueba&access_token=$ACCESS_TOKEN  
+https://api.mercadolibre.com/mclics/productAd/search?custId=66258610&refFrom=Reference%20owner&refId=Reference%20ID&access_token=$ACCESS_TOKEN  
 </pre>
 
 You will receive the following JSON response:
 
 {% highlight javascript %}
 
-NOT YET
+{
+	"productAdIds":"11130279",
+	"totalAds":"1"
+}
 
 {% endhighlight %}
