@@ -16,7 +16,8 @@ A successful authentication flow results in your application obtaining a user ac
 - [Scenarios](#scenarios)
 - [Web Server Applications](#webserver-applications)
 - [Refresh your token](#token-refresh)
-- [Client-side Applications using JavaScript](#client-side-flow)
+- [Client-side Applications](#client-side-flow)
+- [Error Codes Reference](#error-codes)
 
 
 ##Access Token Validity & Expiration {#token-validity}
@@ -209,28 +210,53 @@ The response includes the original access_token validated for 3 more hours and a
 {% endhighlight %}
 
 
-## Client-side Applications using JavaScript SDK {#client-side-flow}
+## Client-side Applications authentication {#client-side-flow}
+This flow is suitable for clients incapable of maintaining their client credentials confidential (for authenticating with the authorization server) such as client applications residing in a user-agent, typically implemented in a browser using a scripting language such as JavaScript, or native applications.
 
-Our OAuth implementation also supports client-side applications (Javascript running on the browser). As with the server-flow, the client-side flow also starts with the OAuth Dialog for user authentication and app authorization.
+These clients cannot keep client secrets confidential and the authentication of the client is based on the user-agent’s same-origin policy.
+As a redirection-based profile, the client must be capable of interacting with the resource owner’s user-agent (typically a web
+browser) and capable of receiving incoming requests (via redirection) from the authorization server.
 
+Unlike the authorization code flow in which the client makes separate requests for authorization and access token, the client receives the access token as the result of the authorization request.
 
 If you are going to choose this alternative, we strongly suggest you use the [Javascript SDK](http://developers.mercadolibre.com/javascript-sdk/). This SDK hides for you all the complexity of the OAuth protocol and it will save you lots of time.
 
-**How the client-side flow works**
+
+
+**Client-side flow Overview**
 
 The main difference is that when the users grants your application with permission, MercadoLibre will give your application an access token (not a code).
 
 You don't need to pass your redirect URL. Just make a GET request to this URL:
 
-        https://auth.mercadolibre.com.ar/authorization?response_type=token&client_id=Client_id
-
+<pre>https://auth.mercadolibre.com.ar/authorization?response_type=token&client_id=Client_id</pre>
 
 If your app is succesfully authenticated and the user grants permission (consent), the authorization server will redirect to your applications callback URL with an access token in the query string response like this:
 
-	http://YOUR_URL?access_token=APP_USR-6092-3246532-cb45c82853f6e620bb0deda096b128d3-8035443&token_type=bearer,expires_in=10800
+<pre>http://YOUR_URL?access_token=APP_USR-6092-3246532-cb45c82853f6e620bb0deda096b128d3-8035443&token_type=bearer,expires_in=10800</pre>
 
+**CONSIDERATIONS**
 
 Keep in mind that using this flow you will not be able to obtain a refresh token. 
 Once the token expires, you will need to the redirect the user to the authorization URL again to obtain a full new access token.
 
 
+
+
+##Error Codes Reference {#error-codes}
+
+<table class="datagrid">
+<tbody>
+  <tr><th>Error_code</th><th>Error message</th><th>Description</th></tr>
+  <tr><td>invalid_client</td><td>client_id [] o client_secret [] inválidos</td><td>The client identifier provided is invalid.</td></tr>
+  <tr><td>invalid_grant</td><td>Error validando el parámetro code.</td><td>The provided authorization grant is invalid, expired, revoked, or does not match the redirection URI used in the authorization request.</td></tr>
+  <tr><td>invalid_grant</td><td>Error validando las credenciales con el Usuario:{0} Password:{1}</td><td>The provided authorization grant is invalid.</td></tr>
+  <tr><td>invalid_grant</td><td>No se puede generar un token sin scope offline_access, el usuario {0} no tiene una sesion activa</td><td>The provided authorization grant is invalid, expired, revoked, or does not match the redirection URI used in the authorization request.</td></tr>
+  <tr><td>invalid_grant</td><td>Error generando el access token al usuario {0} para la aplicación {1} y scopes {2}</td><td>The provided authorization grant is invalid, expired, revoked, or does not match the redirection URI used in the authorization request.</td></tr>
+  <tr><td>invalid_client</td><td>.</td><td>The client identifier provided is invalid.</td></tr>
+  <tr><td>invalid_scope</td><td>.</td><td>The requested scope is invalid, unknown, or malformed.</td></tr>
+  <tr><td>unauthorized_client</td><td>.</td><td>The client is not authorized to request an authorization code using this method.</td></tr>
+  <tr><td>invalid_request</td><td>.</td><td>The request is missing a required parameter, includes an unsupported parameter or parameter value, or is otherwise malformed.</td></tr>
+  <tr><td>unsupported_grant_type</td><td>.</td><td>The authorization grant type is not supported by the authorization server.</td></tr>
+</tbody>
+</table>
