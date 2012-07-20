@@ -95,65 +95,10 @@ You can list a real estate property by sending a POST request to our Items API w
 To complete the JSON with the necessary info, follow this steps:
 
 - 1\. [Operation and property type selection](/res-categ-selection)
-
-<pre class="terminal">
- {
-  ...
-  "category_id": "MLA1474",
-  ...
- }
-</pre>
-
 - 2\. [Attributes selection](/res-attrs-selection)
-
-<pre class="terminal">
- {
- ...
- "pictures": [
-    {
-      "id": "MLA2096545948_102011"
-    }
-  ]
- ...
- }
-</pre>
-
 - 3\. [Location selection](/res-loc-selection)
-
-<pre class="terminal">
- {
-  ...
-  "location": {
-    "address_line": "My property address 1234",
-    "zip_code": "1111",
-    "neighborhood": {
-      "id": "TUxBQlBBUzgyNjBa"
-    },
-    "latitude": -34.48755,
-    "longitude": -58.56987,
-  }
-  ...
- }
-</pre>
-
 - 4\. [Pictures upload (optional)](/res-pic-upload)
 
-<pre class="terminal">
- {
-  ...
-  "location": {
-    "address_line": "My property address 1234",
-    "zip_code": "1111",
-    "neighborhood": {
-      "id": "TUxBQlBBUzgyNjBa"
-    },
-    "latitude": -34.48755,
-    "longitude": -58.56987,
-  }
-  ...
- }
-</pre>
-	
 [Click here](/res-json-full-specs) to see the full specification of possible elements you can send in a real estate property JSON.
 
 **To list a property, POST the JSON to the following URL:**
