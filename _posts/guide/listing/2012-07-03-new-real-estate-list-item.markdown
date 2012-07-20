@@ -99,6 +99,7 @@ To complete the JSON with the necessary info, follow this steps:
 - 3\. [Location selection](/res-loc-selection)
 - 4\. [Pictures upload (optional)](/res-pic-upload)
 
+
 [Click here](/res-json-full-specs) to see the full specification of possible elements you can send in a real estate property JSON.
 
 **To list a property, POST the JSON to the following URL:**
