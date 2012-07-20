@@ -5,7 +5,7 @@ categories: guides-res
 tags: modify-pause-finalize
 ---
 
-#Real estate listing
+#List Real Estate properties
 
 Modify, pause or finalize your property publication {#modify}
 ---------------------------------------------------

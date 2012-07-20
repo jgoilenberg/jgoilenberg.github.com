@@ -5,7 +5,7 @@ categories: guides-res
 tags: agency
 ---
 
-#Real estate listing
+#List Real Estate properties
 
 Identify as a Real Estate Agency 	{#identifyasagency} 
 ------------------------------------------------

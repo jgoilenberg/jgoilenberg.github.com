@@ -5,7 +5,7 @@ categories: guides-res
 tags: loc-selection
 ---
 
-#Real estate listing
+#List Real Estate properties
 
 Location selection	{#locationselection} 
 ------------------

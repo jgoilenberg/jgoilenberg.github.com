@@ -5,7 +5,7 @@ categories: guides-res
 tags: json-full-specs
 ---
 
-#Real estate listing
+#List Real Estate properties
 
 Real Estate JSON full specification 	{#jsonfullspecs}
 -----------------------------------

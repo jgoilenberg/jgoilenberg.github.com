@@ -5,7 +5,7 @@ categories: guides-res
 tags: relist
 ---
 
-#Real estate listing
+#List Real Estate properties
 
 Relist your properties {#relist}
 -------------------------

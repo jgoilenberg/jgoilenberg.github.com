@@ -5,10 +5,12 @@ categories: guides-res
 tags: create-app
 ---
 
-#Real estate listing
+#List Real Estate properties
 
-Create your MercadoLibre APP 	{#createapp} 
+Create your MELI APP 	{#createapp} 
 ----------------------------
+
+Before creating your MELI APP you will need to [have a MELI signed up user](/res-signup-user).
 
 To accomplish this go to the following URL:
 

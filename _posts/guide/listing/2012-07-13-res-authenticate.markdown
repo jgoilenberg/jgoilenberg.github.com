@@ -5,7 +5,7 @@ categories: guides-res
 tags: authenticate
 ---
 
-#Real estate listing
+#List Real Estate properties
 
 Authenticate	{#authenticate}
 ------------

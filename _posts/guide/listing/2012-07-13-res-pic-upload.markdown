@@ -5,7 +5,7 @@ categories: guides-res
 tags: pic-upload
 ---
 
-#Real estate listing
+#List Real Estate properties
 
 Pictures upload	{#picupload}
 ------------

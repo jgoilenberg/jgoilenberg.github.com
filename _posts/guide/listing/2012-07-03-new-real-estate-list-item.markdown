@@ -5,20 +5,18 @@ categories: guides
 tags: Selling
 ---
 
-#Real estate listing
+#List Real Estate properties
 
 Preconditions 	{#preconditions}
 ---------------------------------
 
 [Having a basic knowledge of REST and how MELI APIs work](/getting-started)
 
-[Having a MELI signed up user](/res-signup-user)
-
 [Having a MELI APP created](/res-create-app)
 
 [Getting an access token (authentication)](/res-authenticate)
 
-List your real estate property 	{#publish}
+List a real estate property 	{#publish}
 ---------------------------------
 
 You can list a real estate property by sending a POST request to our Items API with a JSON like the the following example:
@@ -28,16 +26,16 @@ You can list a real estate property by sending a POST request to our Items API w
 { 
   "site_id": "MLA", <-- Indicates the country you are listing in
   "title": "Property title",
-  "category_id": "MLA1474", <-- Indicates the operation and property type
+  "category_id": "MLA1474", <-- Operation and property type
   "price": 50000,
   "currency_id": "ARS",
   "available_quantity": 1,
   "buying_mode": "classified",
-  "listing_type_id": "silver", <-- Indicates the type of publication your item will be listed in
+  "listing_type_id": "silver", <-- Publication type your item will be listed in
   "condition": "not_specified",
   "pictures": [
     {
-      "id": "MLA2096545948_102011" <-- Indicates the picture ID if you have previously uploaded it to our Pictures API
+      "id": "MLA2096545948_102011" <-- Picture ID if you have previously uploaded it to our Pictures API
     },
     {
       "source":"http://media.point2.com/p2a/htmltext/f2a4/590f/3627/f49be256595a86c91457/original.jpg"
@@ -45,12 +43,12 @@ You can list a real estate property by sending a POST request to our Items API w
   ],
   "location": {
     "address_line": "My property address 1234",
-    "zip_code": "1111", <-- Recommended for Mexico and Brazil
+    "zip_code": "1111", <-- Optional, but recommended for Mexico and Brazil
     "neighborhood": {
       "id": "TUxBQlBBUzgyNjBa"
     },
-    "latitude": -34.48755,
-    "longitude": -58.56987,
+    "latitude": -34.48755,   <-- Optional
+    "longitude": -58.56987,  <-- Optional
   },  
   "attributes": [
     {
@@ -96,10 +94,65 @@ You can list a real estate property by sending a POST request to our Items API w
 
 To complete the JSON with the necessary info, follow this steps:
 
-- 1\. [Pictures upload (optional)](/res-pic-upload)
-- 2\. [Category selection](/res-categ-selection)
+- 1\. [Operation and property type selection](/res-categ-selection)
+
+<pre class="terminal">
+ {
+  ...
+  "category_id": "MLA1474",
+  ...
+ }
+</pre>
+
+- 2\. [Attributes selection](/res-attrs-selection)
+
+<pre class="terminal">
+ {
+ ...
+ "pictures": [
+    {
+      "id": "MLA2096545948_102011"
+    }
+  ]
+ ...
+ }
+</pre>
+
 - 3\. [Location selection](/res-loc-selection)
-- 4\. [Attributes selection](/res-attrs-selection)
+
+<pre class="terminal">
+ {
+  ...
+  "location": {
+    "address_line": "My property address 1234",
+    "zip_code": "1111",
+    "neighborhood": {
+      "id": "TUxBQlBBUzgyNjBa"
+    },
+    "latitude": -34.48755,
+    "longitude": -58.56987,
+  }
+  ...
+ }
+</pre>
+
+- 4\. [Pictures upload (optional)](/res-pic-upload)
+
+<pre class="terminal">
+ {
+  ...
+  "location": {
+    "address_line": "My property address 1234",
+    "zip_code": "1111",
+    "neighborhood": {
+      "id": "TUxBQlBBUzgyNjBa"
+    },
+    "latitude": -34.48755,
+    "longitude": -58.56987,
+  }
+  ...
+ }
+</pre>
 	
 [Click here](/res-json-full-specs) to see the full specification of possible elements you can send in a real estate property JSON.
 
@@ -119,15 +172,7 @@ If the property was successfully listed, you will receive a "201 Created" respon
 
 Note: after successfully listing an item, its status will be "not yet active" until it passes our security filters and automatically gets activated. This process should take no longer than an hour.
 
-If you want you can validate your JSON before actually listing it by sending it in a POST request body to the following URL:
-
-<pre class="terminal">
- https://api.mercadolibre.com/items/validate?access_token=YOUR_ACCESS_TOKEN
-</pre>
-
-If the response status code is "200 OK" or "204 No content", then the JSON was successfully validated and your property is ready to be listed.
-
-This validation process is not mandatory, but will most likely become handy when testing your APP. Keep in mind that there is no sandbox nor pre-production environment, so every property listed during your testing phase will be visible in our platform by all of our users. It is highly recommended that you finalize listed items posted while testing.
+[Click here](/res-validate) to learn how to validate your JSON before actually posting it to our Items API.
 
 If you were to receive an error status code on a response when communicating with our APIs, in most cases you will be able to determine the cause of the error by looking at the response body. In addition to the response status code, the response body will also contain detailed information regarding the error and will most likely help you understand the cause of it and how to solve different issues.
 

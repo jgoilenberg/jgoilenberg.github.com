@@ -5,7 +5,7 @@ categories: guides-res
 tags: attrs-selection
 ---
 
-#Real estate listing
+#List Real Estate properties
 
 Attributes selection	{#attributesselection} 
 --------------------

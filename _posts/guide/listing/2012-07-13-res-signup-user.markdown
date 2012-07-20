@@ -5,7 +5,7 @@ categories: guides-res
 tags: signup-user
 ---
 
-#Real estate listing
+#List Real Estate properties
 
 How to sign up a MELI user {#signUp} 
 ---------------------------
