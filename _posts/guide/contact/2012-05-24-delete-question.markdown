@@ -19,6 +19,6 @@ Successful response
 {"message":"Pregunta eliminada"}
 </pre>
 
-\*For the moment the response text is in Spanish
+*For the moment the response text is in Spanish
 
 
