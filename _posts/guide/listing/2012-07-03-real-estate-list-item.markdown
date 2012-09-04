@@ -125,4 +125,4 @@ You can now follow the instructions to:
 
 [Relist your properties](/res-relist) 
 
-Don't hesitate to contact us for further assistance, comments and feedback about this tutorial, etc. at <a href="mailto:developers_re@mercadolibre.com" target="_blank">developers_re@mercadolibre.com</a>. We will get back to you as soon as possible!
+Don't hesitate to contact us for further assistance, comments and feedback about this tutorial, etc. at <a href="mailto:developers@mercadolibre.com" target="_blank">developers@mercadolibre.com</a>. We will get back to you as soon as possible!
